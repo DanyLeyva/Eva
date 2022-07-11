@@ -5,6 +5,8 @@
  */
 package App_Interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -16,6 +18,7 @@ public class Caso_Inicio extends javax.swing.JFrame {
      */
     public Caso_Inicio() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,21 +30,123 @@ public class Caso_Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_IngresaUsuario = new javax.swing.JLabel();
+        jTextField_Usuario = new javax.swing.JTextField();
+        jLabel_Sexo = new javax.swing.JLabel();
+        jComboBox_Sexos = new javax.swing.JComboBox<>();
+        jLabel_Idioma = new javax.swing.JLabel();
+        jComboBox_Idiomas = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel_IngresaUsuario.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel_IngresaUsuario.setText("Ingresa tu nombre");
+
+        jTextField_Usuario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTextField_Usuario.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel_Sexo.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel_Sexo.setText("Sexo");
+
+        jComboBox_Sexos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jComboBox_Sexos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mujer", "Hombre", "Prefiero no decirlo" }));
+
+        jLabel_Idioma.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel_Idioma.setText("Idioma");
+
+        jComboBox_Idiomas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jComboBox_Idiomas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "Inglés" }));
+
+        jButton1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton1.setText("Continuar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_IngresaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField_Usuario)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel_Idioma)
+                            .addComponent(jLabel_Sexo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jComboBox_Sexos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBox_Idiomas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(70, 70, 70)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel_IngresaUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Sexo)
+                    .addComponent(jComboBox_Sexos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Idioma)
+                    .addComponent(jComboBox_Idiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Boton Continuar
+        String nombre, sexo, idioma;
+        nombre = jTextField_Usuario.getText();
+        sexo = jComboBox_Sexos.getSelectedItem().toString();
+        idioma = jComboBox_Idiomas.getSelectedItem().toString();
+
+        //JOptionPane.showMessageDialog(null, sexo + nombre + idioma);
+        dispose();
+        if (idioma.equals("Español")) {
+            switch (sexo) {
+                case "Hombre":
+                JOptionPane.showMessageDialog(null, "Bienvenido " + nombre + " mi nombre es Eva y será un placer ser tu asistente");
+                break;
+                case "Mujer":
+                JOptionPane.showMessageDialog(null, "Bienvenida " + nombre + " mi nombre es Eva y será un placer ser tu asistente");
+                break;
+                case "Prefiero no decirlo":
+                JOptionPane.showMessageDialog(null, "Bienvenid@ " + nombre + " mi nombre es Eva y será un placer ser tu asistente");
+                break;
+                default:
+                break;
+            }
+        }
+        if (idioma.equals("Inglés")) {
+            JOptionPane.showMessageDialog(null, "You're welcome " + nombre + " my name is Eva and it will be a pleasure to be your assistant");
+        }
+
+        JOptionPane.showMessageDialog(null, "¿Deseas configurar el dispositivo antes de continuar?");
+        JOptionPane.showMessageDialog(null, "No es obligatorio pero Eva te lo recomienda");
+
+        new Caso_InicioDecision().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +184,12 @@ public class Caso_Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox_Idiomas;
+    private javax.swing.JComboBox<String> jComboBox_Sexos;
+    private javax.swing.JLabel jLabel_Idioma;
+    private javax.swing.JLabel jLabel_IngresaUsuario;
+    private javax.swing.JLabel jLabel_Sexo;
+    private javax.swing.JTextField jTextField_Usuario;
     // End of variables declaration//GEN-END:variables
 }
