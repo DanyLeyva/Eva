@@ -16,6 +16,8 @@ public class Caso_Actividades extends javax.swing.JFrame {
      */
     public Caso_Actividades() {
         initComponents();
+                setLocationRelativeTo(null);
+
     }
 
     /**

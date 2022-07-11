@@ -16,7 +16,8 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
      */
     public Caso_InicioDecision() {
         initComponents();
-        setLocationRelativeTo(null);
+                setLocationRelativeTo(null);
+
     }
 
     /**
@@ -31,9 +32,8 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
         jLabel_IngresaUsuario1 = new javax.swing.JLabel();
         jButton_Si = new javax.swing.JButton();
         jButton_No = new javax.swing.JButton();
-        jLabel_IngresaUsuario2 = new javax.swing.JLabel();
-        jButton_Si1 = new javax.swing.JButton();
-        jButton_No1 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel_IngresaUsuario1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel_IngresaUsuario1.setText("¿Iniciar configuración?");
@@ -54,52 +54,31 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
             }
         });
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel_IngresaUsuario2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel_IngresaUsuario2.setText("¿Iniciar configuración?");
-
-        jButton_Si1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton_Si1.setText("Si");
-        jButton_Si1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Si1ActionPerformed(evt);
-            }
-        });
-
-        jButton_No1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton_No1.setText("No");
-        jButton_No1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_No1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(jButton_Si1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_Si, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_No1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_No, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_IngresaUsuario2)
+                .addComponent(jLabel_IngresaUsuario1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_IngresaUsuario2)
+                .addComponent(jLabel_IngresaUsuario1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_Si1)
-                    .addComponent(jButton_No1))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(jButton_Si)
+                    .addComponent(jButton_No))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,7 +87,7 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
     private void jButton_SiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SiActionPerformed
         // boton si
 
-        dispose();
+        //dispose();
 
         new Caso_Menu().setVisible(true);
     }//GEN-LAST:event_jButton_SiActionPerformed
@@ -116,26 +95,10 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
     private void jButton_NoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NoActionPerformed
         // boton no
 
-        dispose();
+        //dispose();
         new Caso_Actividades().setVisible(true);
 
     }//GEN-LAST:event_jButton_NoActionPerformed
-
-    private void jButton_Si1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Si1ActionPerformed
-        // boton si
-
-        dispose();
-
-        new Caso_Menu().setVisible(true);
-    }//GEN-LAST:event_jButton_Si1ActionPerformed
-
-    private void jButton_No1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_No1ActionPerformed
-        // boton no
-
-        dispose();
-        new Caso_Actividades().setVisible(true);
-
-    }//GEN-LAST:event_jButton_No1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,10 +137,7 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_No;
-    private javax.swing.JButton jButton_No1;
     private javax.swing.JButton jButton_Si;
-    private javax.swing.JButton jButton_Si1;
     private javax.swing.JLabel jLabel_IngresaUsuario1;
-    private javax.swing.JLabel jLabel_IngresaUsuario2;
     // End of variables declaration//GEN-END:variables
 }
