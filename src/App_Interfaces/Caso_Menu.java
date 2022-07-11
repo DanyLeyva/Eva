@@ -16,7 +16,7 @@ public class Caso_Menu extends javax.swing.JFrame {
      */
     public Caso_Menu() {
         initComponents();
-                setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
     }
 
@@ -29,31 +29,87 @@ public class Caso_Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jButton_NombresImporantes = new javax.swing.JButton();
+        jButton_Pasatiempos = new javax.swing.JButton();
+        jButton_HoraDormir = new javax.swing.JButton();
+        jButton_Contactos = new javax.swing.JButton();
+        jButton_Medicinas = new javax.swing.JButton();
+        jButton_DatosPersonales = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Hola");
+        jButton_NombresImporantes.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_NombresImporantes.setText("Dime el nombre y cumpleaños depersonas importantes para ti");
+        jButton_NombresImporantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_NombresImporantesActionPerformed(evt);
+            }
+        });
+
+        jButton_Pasatiempos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_Pasatiempos.setText("Que es lo que te gusta hacer a diario u ocacionalmente");
+        jButton_Pasatiempos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_PasatiemposActionPerformed(evt);
+            }
+        });
+
+        jButton_HoraDormir.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_HoraDormir.setText("Ingresar hora de dormir y de despertar");
+
+        jButton_Contactos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_Contactos.setText("Ingresar números de telefono de personas importantes");
+
+        jButton_Medicinas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_Medicinas.setText("Añadir medicinas que debo tomar y cuándo las debo tomar");
+
+        jButton_DatosPersonales.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_DatosPersonales.setText("Ingresar mis datos personales (En caso de que olvides quien eres)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(240, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(135, 135, 135))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton_Contactos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_Pasatiempos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_HoraDormir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_DatosPersonales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_Medicinas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_NombresImporantes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jLabel1)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addComponent(jButton_NombresImporantes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton_Pasatiempos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton_HoraDormir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton_Contactos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton_DatosPersonales)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_Medicinas)
+                .addGap(20, 20, 20))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_NombresImporantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NombresImporantesActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton_NombresImporantesActionPerformed
+
+    private void jButton_PasatiemposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PasatiemposActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_PasatiemposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,6 +147,11 @@ public class Caso_Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton_Contactos;
+    private javax.swing.JButton jButton_DatosPersonales;
+    private javax.swing.JButton jButton_HoraDormir;
+    private javax.swing.JButton jButton_Medicinas;
+    private javax.swing.JButton jButton_NombresImporantes;
+    private javax.swing.JButton jButton_Pasatiempos;
     // End of variables declaration//GEN-END:variables
 }
