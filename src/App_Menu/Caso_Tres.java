@@ -198,7 +198,6 @@ public class Caso_Tres extends javax.swing.JFrame {
              pps.setString(2, Horas2+":"+Minutos2+":"+Segundos2);
              pps.setString(3, Integer.toString(con.Usuarios));
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Alarmas guardados con exito!!!");
               }
               }
         }catch(Exception ex){

@@ -171,7 +171,6 @@ public class Caso_Cuatro extends javax.swing.JFrame {
              pps.setString(3, jTextField_NumberPersona1.getText());
              pps.setString(4, Integer.toString(con.Usuarios));
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Contactos de emergencia guardados con exito!!!");
               }
               }
         }catch(Exception ex){
@@ -186,7 +185,6 @@ public class Caso_Cuatro extends javax.swing.JFrame {
               if(!jTextField_NamePersona1.getText().equals("")){
              PreparedStatement pps = cn.prepareStatement("delete from caso_cuatro where nombre='"+jTextField_NamePersona1.getText()+"'");
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Contacto borrado con exito!!!");
               }
               
           }

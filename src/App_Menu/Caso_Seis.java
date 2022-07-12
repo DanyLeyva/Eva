@@ -203,7 +203,6 @@ public class Caso_Seis extends javax.swing.JFrame {
              pps.setString(2, Horas+":"+Minutos+":"+Segundos);
              pps.setString(3, Integer.toString(con.Usuarios));
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Medicinas guardados con exito!!!");
               }
               }
         }catch(Exception ex){
@@ -217,7 +216,6 @@ public class Caso_Seis extends javax.swing.JFrame {
               if(!jTextField_NameMedicina.getText().equals("")){
              PreparedStatement pps = cn.prepareStatement("delete from caso_seis where nombre='"+jTextField_NameMedicina.getText()+"'");
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Datos borrados con exito!!!");
               }
               
           }

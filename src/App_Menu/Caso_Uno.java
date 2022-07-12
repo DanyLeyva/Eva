@@ -243,7 +243,6 @@ public class Caso_Uno extends javax.swing.JFrame {
              pps.setString(5, Integer.toString(con.Usuarios));
              pps.executeUpdate();
              
-             JOptionPane.showMessageDialog(null,"Conocidos guardados con exito!!!");
               }
              }
           
@@ -259,7 +258,6 @@ public class Caso_Uno extends javax.swing.JFrame {
               if(!jTextField_NamePersona1.getText().equals("")){
              PreparedStatement pps = cn.prepareStatement("delete from caso_uno where nombre='"+jTextField_NamePersona1.getText()+"'");
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Datos borrados con exito!!!");
               }
               
           }

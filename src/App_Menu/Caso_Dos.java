@@ -183,7 +183,6 @@ public class Caso_Dos extends javax.swing.JFrame {
              pps.setString(3, Integer.toString(con.Usuarios));
              pps.executeUpdate();
              
-             JOptionPane.showMessageDialog(null,"Pasatiempos guardados con exito!!!");
               }
               
           }
@@ -198,7 +197,6 @@ public class Caso_Dos extends javax.swing.JFrame {
               if(!jTextField_Pasatiempo.getText().equals("")){
              PreparedStatement pps = cn.prepareStatement("delete from caso_dos where hobbie='"+jTextField_Pasatiempo.getText()+"'");
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Pasatiempo borrado con exito!!!");
               }
               
           }

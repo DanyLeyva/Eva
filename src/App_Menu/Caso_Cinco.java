@@ -195,7 +195,6 @@ public class Caso_Cinco extends javax.swing.JFrame {
              pps.setString(3, Horas+":"+Minutos+":"+Segundos);
              pps.setString(4, Integer.toString(con.Usuarios));
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Datos guardados con exito!!!");
               }
 
               }
@@ -211,7 +210,6 @@ public class Caso_Cinco extends javax.swing.JFrame {
               if(!jTextField_Direccion.getText().equals("")){
              PreparedStatement pps = cn.prepareStatement("delete from caso_cinco where direccion='"+jTextField_Direccion.getText()+"'");
              pps.executeUpdate();
-             JOptionPane.showMessageDialog(null,"Datos borrados con exito!!!");
               }
               
           }
