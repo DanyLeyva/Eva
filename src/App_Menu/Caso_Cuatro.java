@@ -277,7 +277,7 @@ public class Caso_Cuatro extends javax.swing.JFrame {
         objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
         
     }//GEN-LAST:event_jButton_SaveNumberActionPerformed
-    Caso_cuatro con = new Caso_cuatro();
+    Caso_cuatro con = new Caso_cuatro(); 
     Connection cn = (Connection) con.conexion();
     
     public void BD(){

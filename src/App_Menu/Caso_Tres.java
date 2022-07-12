@@ -119,7 +119,7 @@ public class Caso_Tres extends javax.swing.JFrame {
         // Boton Guardar
         Caso_tres objeto = new Caso_tres();
         Confirmacion_config objeto2 = new Confirmacion_config();
-        BD();
+        BD(); 
         objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
     }//GEN-LAST:event_jButton_SaveAlarmasActionPerformed
 
