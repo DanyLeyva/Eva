@@ -37,14 +37,16 @@ public class Caso_Cinco extends javax.swing.JFrame {
 
         jLabel_TituloDatos = new javax.swing.JLabel();
         jTextField_Direccion = new javax.swing.JTextField();
-        jTextField_Alarma = new javax.swing.JTextField();
-        jTextField_Birthday = new javax.swing.JTextField();
         jButton_SaveDP = new javax.swing.JButton();
         jLabel_Direccion = new javax.swing.JLabel();
-        jLabel_Birthday = new javax.swing.JLabel();
-        jLabel_Alarma = new javax.swing.JLabel();
-        jLabel_FormatoTiempo = new javax.swing.JLabel();
         jLabel_AvisoDatos = new javax.swing.JLabel();
+        jLabel_BirthdayPesona2 = new javax.swing.JLabel();
+        jComboBox_Hour = new javax.swing.JComboBox<>();
+        jComboBox_Min = new javax.swing.JComboBox<>();
+        jComboBox_Seg = new javax.swing.JComboBox<>();
+        jLabel_BirthdayPesona1 = new javax.swing.JLabel();
+        jButton_Borrar = new javax.swing.JButton();
+        jTextField_Birthday = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,49 +61,61 @@ public class Caso_Cinco extends javax.swing.JFrame {
 
         jLabel_Direccion.setText("Direccion");
 
-        jLabel_Birthday.setText("Cumpleaños");
-
-        jLabel_Alarma.setText("Alarma para recordar datos");
-
-        jLabel_FormatoTiempo.setText("Formato de las alarmas: HH : MM ");
-
         jLabel_AvisoDatos.setText("Recuerda que en cualquier momento puedes modificar los datos desde el menu!!!");
+
+        jLabel_BirthdayPesona2.setText("Hora a recordar");
+
+        jComboBox_Hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hour", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" }));
+
+        jComboBox_Min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Min", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        jComboBox_Seg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seg", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        jLabel_BirthdayPesona1.setText("cumpleaños");
+
+        jButton_Borrar.setText("Borrar");
+        jButton_Borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_BorrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton_SaveDP)
-                .addGap(390, 390, 390))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel_Alarma, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel_Birthday, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel_Direccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField_Direccion)
-                            .addComponent(jTextField_Birthday)
-                            .addComponent(jTextField_Alarma, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel_FormatoTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(222, 222, 222)
                         .addComponent(jLabel_TituloDatos))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(188, 188, 188)
-                        .addComponent(jLabel_AvisoDatos)))
-                .addContainerGap(107, Short.MAX_VALUE))
+                        .addComponent(jLabel_AvisoDatos))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel_BirthdayPesona2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel_BirthdayPesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton_SaveDP)
+                                .addGap(138, 138, 138)
+                                .addComponent(jButton_Borrar))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox_Hour, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField_Birthday))))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,25 +126,27 @@ public class Caso_Cinco extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel_AvisoDatos)
-                        .addGap(35, 35, 35)
-                        .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel_Direccion)
-                        .addGap(59, 59, 59)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_Direccion)
+                            .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(64, 64, 64)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Birthday))
-                .addGap(66, 66, 66)
+                    .addComponent(jLabel_BirthdayPesona1)
+                    .addComponent(jTextField_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_Alarma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Alarma))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addComponent(jLabel_FormatoTiempo)
-                .addGap(38, 38, 38)
-                .addComponent(jButton_SaveDP)
-                .addGap(110, 110, 110))
+                    .addComponent(jLabel_BirthdayPesona2)
+                    .addComponent(jComboBox_Hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(168, 168, 168)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_SaveDP)
+                    .addComponent(jButton_Borrar))
+                .addGap(107, 107, 107))
         );
 
         pack();
@@ -142,30 +158,66 @@ public class Caso_Cinco extends javax.swing.JFrame {
         Confirmacion_config objeto2 = new Confirmacion_config();
         BD();
         objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+        Vacia();
     }//GEN-LAST:event_jButton_SaveDPActionPerformed
+
+    private void jButton_BorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BorrarActionPerformed
+        // Boton Borrar
+        BDB();
+    }//GEN-LAST:event_jButton_BorrarActionPerformed
     
     Caso_cinco con = new Caso_cinco(); 
     Connection cn = (Connection) con.conexion();
     
+    String Horas,Minutos,Segundos,Year,Mes,Dia;
+    public void ObtenTiempo(){
+        Horas = (String) jComboBox_Hour.getSelectedItem();
+        Minutos = (String) jComboBox_Min.getSelectedItem();
+        Segundos = (String) jComboBox_Seg.getSelectedItem();
+        
+    }
+    
+    public void Vacia(){
+    jTextField_Direccion.setText("");
+    jTextField_Birthday.setText("");
+    jComboBox_Hour.setSelectedItem("Hour");
+    jComboBox_Min.setSelectedItem("Min");
+    jComboBox_Seg.setSelectedItem("Seg");}
+    
     public void BD(){
+        ObtenTiempo();
         try{
           for(int i = 0; i < 1;i++){
               if(!jTextField_Direccion.getText().equals("")){
              PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_cinco(direccion,cumpleaños,alarma_datos,FK_usuario) VALUES(?,?,?,?)");
              pps.setString(1, jTextField_Direccion.getText());
              pps.setString(2, jTextField_Birthday.getText());
-             pps.setString(3, jTextField_Alarma.getText());
+             pps.setString(3, Horas+":"+Minutos+":"+Segundos);
              pps.setString(4, Integer.toString(con.Usuarios));
              pps.executeUpdate();
              JOptionPane.showMessageDialog(null,"Datos guardados con exito!!!");
               }
 
               }
-          con.Usuarios++;
         }catch(Exception ex){
             Logger.getLogger(Caso_Cinco.class.getName()).log(Level.SEVERE, null,ex);
         }
         
+    }
+    
+    public void BDB(){
+         try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_Direccion.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("delete from caso_cinco where direccion='"+jTextField_Direccion.getText()+"'");
+             pps.executeUpdate();
+             JOptionPane.showMessageDialog(null,"Datos borrados con exito!!!");
+              }
+              
+          }
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Cinco.class.getName()).log(Level.SEVERE, null,ex);
+        }
     }
     
     /**
@@ -204,14 +256,16 @@ public class Caso_Cinco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_Borrar;
     private javax.swing.JButton jButton_SaveDP;
-    private javax.swing.JLabel jLabel_Alarma;
+    private javax.swing.JComboBox<String> jComboBox_Hour;
+    private javax.swing.JComboBox<String> jComboBox_Min;
+    private javax.swing.JComboBox<String> jComboBox_Seg;
     private javax.swing.JLabel jLabel_AvisoDatos;
-    private javax.swing.JLabel jLabel_Birthday;
+    private javax.swing.JLabel jLabel_BirthdayPesona1;
+    private javax.swing.JLabel jLabel_BirthdayPesona2;
     private javax.swing.JLabel jLabel_Direccion;
-    private javax.swing.JLabel jLabel_FormatoTiempo;
     private javax.swing.JLabel jLabel_TituloDatos;
-    private javax.swing.JTextField jTextField_Alarma;
     private javax.swing.JTextField jTextField_Birthday;
     private javax.swing.JTextField jTextField_Direccion;
     // End of variables declaration//GEN-END:variables

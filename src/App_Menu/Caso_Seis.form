@@ -23,8 +23,42 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="345" max="-2" attributes="0"/>
+              <Component id="jButton_SaveMedicinas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+              <Component id="jButton_Borrar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="jLabel_FormatoTiempo" min="-2" pref="280" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jLabel_BirthdayPesona2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel_NamePesona1" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jComboBox_Hour" min="-2" pref="128" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jComboBox_Min" min="-2" pref="138" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jComboBox_Seg" min="-2" pref="138" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jTextField_NameMedicina" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="190" max="32767" attributes="0"/>
+          </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="193" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel_TituloMedicinas" min="-2" max="-2" attributes="0"/>
@@ -36,126 +70,10 @@
                   </Group>
               </Group>
           </Group>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="264" pref="264" max="-2" attributes="0"/>
-                                  <Component id="jLabel_Pesona2" min="-2" pref="68" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jLabel_KinshipPesona3" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="jLabel_NamePesona3" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField_NameMedicina3" pref="209" max="32767" attributes="0"/>
-                                              <Component id="jTextField_AlarmaMedicina3" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="264" pref="264" max="-2" attributes="0"/>
-                                          <Component id="jLabel_Pesona3" min="-2" pref="68" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jLabel_KinshipPesona2" alignment="1" pref="147" max="32767" attributes="0"/>
-                                          <Component id="jLabel_NamePesona2" alignment="1" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jTextField_AlarmaMedicina2" min="-2" pref="209" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Component id="jTextField_NameMedicina2" alignment="1" min="-2" pref="209" max="-2" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="jLabel_FormatoTiempo" min="-2" pref="280" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jLabel_KinshipPesona1" pref="147" max="32767" attributes="0"/>
-                                      <Component id="jLabel_NamePesona1" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField_NameMedicina1" pref="209" max="32767" attributes="0"/>
-                                      <Component id="jTextField_AlarmaMedicina1" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="282" max="-2" attributes="0"/>
-                      <Component id="jLabel_Pesona1" min="-2" pref="68" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="264" pref="264" max="-2" attributes="0"/>
-                              <Component id="jLabel_Pesona6" min="-2" pref="68" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jLabel_KinshipPesona6" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jLabel_NamePesona6" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jTextField_NameMedicina6" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField_AlarmaMedicina6" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="264" pref="264" max="-2" attributes="0"/>
-                                      <Component id="jLabel_Pesona4" min="-2" pref="68" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jLabel_KinshipPesona5" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel_NamePesona5" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Component id="jTextField_AlarmaMedicina5" min="-2" pref="209" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Component id="jTextField_NameMedicina5" alignment="1" min="-2" pref="209" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel_KinshipPesona4" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jLabel_NamePesona4" alignment="1" min="-2" pref="147" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField_NameMedicina4" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField_AlarmaMedicina4" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
-                      <Component id="jLabel_Pesona5" min="-2" pref="68" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="372" max="-2" attributes="0"/>
-              <Component id="jButton_SaveMedicinas" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jLabel_Pesona1" min="-2" pref="68" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="347" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -168,85 +86,30 @@
               <Component id="jLabel_AvisoMedicinas" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel_FormatoTiempo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+              <Component id="jLabel_Pesona1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jLabel_Pesona1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="jTextField_NameMedicina" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_NamePesona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_NameMedicina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_KinshipPesona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_AlarmaMedicina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jLabel_Pesona2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_NamePesona2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_NameMedicina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_KinshipPesona2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_AlarmaMedicina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel_Pesona3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_NamePesona3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_NameMedicina3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_KinshipPesona3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_AlarmaMedicina3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_Hour" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_Min" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_Seg" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jLabel_Pesona5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_NamePesona4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_NameMedicina4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_KinshipPesona4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_AlarmaMedicina4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jLabel_Pesona6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_NamePesona5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_NameMedicina5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_KinshipPesona5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_AlarmaMedicina5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel_Pesona4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_NamePesona6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_NameMedicina6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_KinshipPesona6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField_AlarmaMedicina6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel_NamePesona1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="jLabel_BirthdayPesona2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton_SaveMedicinas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton_SaveMedicinas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_Borrar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="25" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -273,133 +136,11 @@
         <Property name="text" type="java.lang.String" value="Nombre"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alarma para la medicina"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina1">
+    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_AlarmaMedicina1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Pesona2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Medicina 2"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_NamePesona2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alarma para la medicina"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina2">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_AlarmaMedicina2">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_NamePesona3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alarma para la medicina"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina3">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_AlarmaMedicina3">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Pesona3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Medicina 2"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Pesona4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Medicina 6"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Pesona5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Medicina 4"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_NamePesona4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alarma para la medicina"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina4">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_AlarmaMedicina4">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Pesona6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Medicina 5"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_NamePesona5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alarma para la medicina"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina5">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_AlarmaMedicina5">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_NamePesona6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alarma para la medicina"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NameMedicina6">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_AlarmaMedicina6">
     </Component>
     <Component class="javax.swing.JButton" name="jButton_SaveMedicinas">
       <Properties>
@@ -413,6 +154,199 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Formato de las alarmas: HH : MM "/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hora a recordar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox_Hour">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="25">
+            <StringItem index="0" value="Hour"/>
+            <StringItem index="1" value="01"/>
+            <StringItem index="2" value="02"/>
+            <StringItem index="3" value="03"/>
+            <StringItem index="4" value="04"/>
+            <StringItem index="5" value="05"/>
+            <StringItem index="6" value="06"/>
+            <StringItem index="7" value="07"/>
+            <StringItem index="8" value="08"/>
+            <StringItem index="9" value="09"/>
+            <StringItem index="10" value="10"/>
+            <StringItem index="11" value="11"/>
+            <StringItem index="12" value="12"/>
+            <StringItem index="13" value="13"/>
+            <StringItem index="14" value="14"/>
+            <StringItem index="15" value="15"/>
+            <StringItem index="16" value="16"/>
+            <StringItem index="17" value="17"/>
+            <StringItem index="18" value="18"/>
+            <StringItem index="19" value="19"/>
+            <StringItem index="20" value="20"/>
+            <StringItem index="21" value="21"/>
+            <StringItem index="22" value="22"/>
+            <StringItem index="23" value="23"/>
+            <StringItem index="24" value="24"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox_Min">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="61">
+            <StringItem index="0" value="Min"/>
+            <StringItem index="1" value="00"/>
+            <StringItem index="2" value="01"/>
+            <StringItem index="3" value="02"/>
+            <StringItem index="4" value="03"/>
+            <StringItem index="5" value="04"/>
+            <StringItem index="6" value="05"/>
+            <StringItem index="7" value="06"/>
+            <StringItem index="8" value="07"/>
+            <StringItem index="9" value="08"/>
+            <StringItem index="10" value="09"/>
+            <StringItem index="11" value="10"/>
+            <StringItem index="12" value="11"/>
+            <StringItem index="13" value="12"/>
+            <StringItem index="14" value="13"/>
+            <StringItem index="15" value="14"/>
+            <StringItem index="16" value="15"/>
+            <StringItem index="17" value="16"/>
+            <StringItem index="18" value="17"/>
+            <StringItem index="19" value="18"/>
+            <StringItem index="20" value="19"/>
+            <StringItem index="21" value="20"/>
+            <StringItem index="22" value="21"/>
+            <StringItem index="23" value="22"/>
+            <StringItem index="24" value="23"/>
+            <StringItem index="25" value="24"/>
+            <StringItem index="26" value="25"/>
+            <StringItem index="27" value="26"/>
+            <StringItem index="28" value="27"/>
+            <StringItem index="29" value="28"/>
+            <StringItem index="30" value="29"/>
+            <StringItem index="31" value="30"/>
+            <StringItem index="32" value="31"/>
+            <StringItem index="33" value="32"/>
+            <StringItem index="34" value="33"/>
+            <StringItem index="35" value="34"/>
+            <StringItem index="36" value="35"/>
+            <StringItem index="37" value="36"/>
+            <StringItem index="38" value="37"/>
+            <StringItem index="39" value="38"/>
+            <StringItem index="40" value="39"/>
+            <StringItem index="41" value="40"/>
+            <StringItem index="42" value="41"/>
+            <StringItem index="43" value="42"/>
+            <StringItem index="44" value="43"/>
+            <StringItem index="45" value="44"/>
+            <StringItem index="46" value="45"/>
+            <StringItem index="47" value="46"/>
+            <StringItem index="48" value="47"/>
+            <StringItem index="49" value="48"/>
+            <StringItem index="50" value="49"/>
+            <StringItem index="51" value="50"/>
+            <StringItem index="52" value="51"/>
+            <StringItem index="53" value="52"/>
+            <StringItem index="54" value="53"/>
+            <StringItem index="55" value="54"/>
+            <StringItem index="56" value="55"/>
+            <StringItem index="57" value="56"/>
+            <StringItem index="58" value="57"/>
+            <StringItem index="59" value="58"/>
+            <StringItem index="60" value="59"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox_Seg">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="61">
+            <StringItem index="0" value="Seg"/>
+            <StringItem index="1" value="00"/>
+            <StringItem index="2" value="01"/>
+            <StringItem index="3" value="02"/>
+            <StringItem index="4" value="03"/>
+            <StringItem index="5" value="04"/>
+            <StringItem index="6" value="05"/>
+            <StringItem index="7" value="06"/>
+            <StringItem index="8" value="07"/>
+            <StringItem index="9" value="08"/>
+            <StringItem index="10" value="09"/>
+            <StringItem index="11" value="10"/>
+            <StringItem index="12" value="11"/>
+            <StringItem index="13" value="12"/>
+            <StringItem index="14" value="13"/>
+            <StringItem index="15" value="14"/>
+            <StringItem index="16" value="15"/>
+            <StringItem index="17" value="16"/>
+            <StringItem index="18" value="17"/>
+            <StringItem index="19" value="18"/>
+            <StringItem index="20" value="19"/>
+            <StringItem index="21" value="20"/>
+            <StringItem index="22" value="21"/>
+            <StringItem index="23" value="22"/>
+            <StringItem index="24" value="23"/>
+            <StringItem index="25" value="24"/>
+            <StringItem index="26" value="25"/>
+            <StringItem index="27" value="26"/>
+            <StringItem index="28" value="27"/>
+            <StringItem index="29" value="28"/>
+            <StringItem index="30" value="29"/>
+            <StringItem index="31" value="30"/>
+            <StringItem index="32" value="31"/>
+            <StringItem index="33" value="32"/>
+            <StringItem index="34" value="33"/>
+            <StringItem index="35" value="34"/>
+            <StringItem index="36" value="35"/>
+            <StringItem index="37" value="36"/>
+            <StringItem index="38" value="37"/>
+            <StringItem index="39" value="38"/>
+            <StringItem index="40" value="39"/>
+            <StringItem index="41" value="40"/>
+            <StringItem index="42" value="41"/>
+            <StringItem index="43" value="42"/>
+            <StringItem index="44" value="43"/>
+            <StringItem index="45" value="44"/>
+            <StringItem index="46" value="45"/>
+            <StringItem index="47" value="46"/>
+            <StringItem index="48" value="47"/>
+            <StringItem index="49" value="48"/>
+            <StringItem index="50" value="49"/>
+            <StringItem index="51" value="50"/>
+            <StringItem index="52" value="51"/>
+            <StringItem index="53" value="52"/>
+            <StringItem index="54" value="53"/>
+            <StringItem index="55" value="54"/>
+            <StringItem index="56" value="55"/>
+            <StringItem index="57" value="56"/>
+            <StringItem index="58" value="57"/>
+            <StringItem index="59" value="58"/>
+            <StringItem index="60" value="59"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_Borrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Borrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_BorrarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

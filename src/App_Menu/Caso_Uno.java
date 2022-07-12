@@ -44,31 +44,17 @@ public class Caso_Uno extends javax.swing.JFrame {
         jLabel_BirthdayPesona1 = new javax.swing.JLabel();
         jTextField_NamePersona1 = new javax.swing.JTextField();
         jTextField_KinshipPersona1 = new javax.swing.JTextField();
-        jTextField_BirthdayPersona1 = new javax.swing.JTextField();
-        jLabel_Pesona2 = new javax.swing.JLabel();
-        jLabel_NamePesona2 = new javax.swing.JLabel();
-        jLabel_KinshipPesona2 = new javax.swing.JLabel();
-        jLabel_BirthdayPesona2 = new javax.swing.JLabel();
-        jTextField_NamePersona2 = new javax.swing.JTextField();
-        jTextField_KinshipPersona2 = new javax.swing.JTextField();
-        jTextField_BirthdayPersona2 = new javax.swing.JTextField();
-        jLabel_Pesona3 = new javax.swing.JLabel();
-        jLabel_NamePesona3 = new javax.swing.JLabel();
-        jLabel_KinshipPesona3 = new javax.swing.JLabel();
-        jLabel_BirthdayPesona3 = new javax.swing.JLabel();
-        jTextField_NamePersona3 = new javax.swing.JTextField();
-        jTextField_KinshipPersona3 = new javax.swing.JTextField();
-        jTextField_BirthdayPersona3 = new javax.swing.JTextField();
-        jTextField_NamePersona4 = new javax.swing.JTextField();
-        jTextField_KinshipPersona4 = new javax.swing.JTextField();
-        jTextField_BirthdayPersona4 = new javax.swing.JTextField();
-        jLabel_Pesona4 = new javax.swing.JLabel();
-        jLabel_NamePesona4 = new javax.swing.JLabel();
-        jLabel_KinshipPesona4 = new javax.swing.JLabel();
-        jLabel_BirthdayPesona4 = new javax.swing.JLabel();
         jLabel_BrthdayFormato = new javax.swing.JLabel();
         jLabel_AvisoPersonas = new javax.swing.JLabel();
         jButton_Save = new javax.swing.JButton();
+        jLabel_BirthdayPesona2 = new javax.swing.JLabel();
+        jComboBox_Hour = new javax.swing.JComboBox<>();
+        jComboBox_Min = new javax.swing.JComboBox<>();
+        jComboBox_Seg = new javax.swing.JComboBox<>();
+        jComboBox_Year = new javax.swing.JComboBox<>();
+        jComboBox_Mes = new javax.swing.JComboBox<>();
+        jComboBox_Dia = new javax.swing.JComboBox<>();
+        jButton_Borrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,30 +68,6 @@ public class Caso_Uno extends javax.swing.JFrame {
 
         jLabel_BirthdayPesona1.setText("cumpleaños");
 
-        jLabel_Pesona2.setText("Persona 2");
-
-        jLabel_NamePesona2.setText("Nombre");
-
-        jLabel_KinshipPesona2.setText("Parentesco");
-
-        jLabel_BirthdayPesona2.setText("cumpleaños");
-
-        jLabel_Pesona3.setText("Persona 3");
-
-        jLabel_NamePesona3.setText("Nombre");
-
-        jLabel_KinshipPesona3.setText("Parentesco");
-
-        jLabel_BirthdayPesona3.setText("cumpleaños");
-
-        jLabel_Pesona4.setText("Persona 4");
-
-        jLabel_NamePesona4.setText("Nombre");
-
-        jLabel_KinshipPesona4.setText("Parentesco");
-
-        jLabel_BirthdayPesona4.setText("cumpleaños");
-
         jLabel_BrthdayFormato.setText("Formato del cumpleaños: YYYY / MM / DD");
 
         jLabel_AvisoPersonas.setText("Recuerda que en cualquier momento puedes agregar mas conocidos desde el menu!!!");
@@ -117,72 +79,33 @@ public class Caso_Uno extends javax.swing.JFrame {
             }
         });
 
+        jLabel_BirthdayPesona2.setText("Hora a recordar");
+
+        jComboBox_Hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hour", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" }));
+
+        jComboBox_Min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Min", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        jComboBox_Seg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seg", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        jComboBox_Year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", " " }));
+
+        jComboBox_Mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+
+        jComboBox_Dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dia", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
+        jButton_Borrar.setText("Borrar");
+        jButton_Borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_BorrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel_BirthdayPesona1)
-                            .addComponent(jLabel_KinshipPesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel_NamePesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField_NamePersona1)
-                            .addComponent(jTextField_KinshipPersona1)
-                            .addComponent(jTextField_BirthdayPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel_BirthdayPesona2)
-                            .addComponent(jLabel_KinshipPesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel_NamePesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField_KinshipPersona2)
-                            .addComponent(jTextField_NamePersona2)
-                            .addComponent(jTextField_BirthdayPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(jLabel_Pesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jLabel_Pesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel_BirthdayPesona4)
-                                .addComponent(jLabel_KinshipPesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel_NamePesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(26, 26, 26)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField_KinshipPersona4)
-                                .addComponent(jTextField_NamePersona4)
-                                .addComponent(jTextField_BirthdayPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel_BirthdayPesona3)
-                                .addComponent(jLabel_KinshipPesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel_NamePesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(26, 26, 26)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField_NamePersona3)
-                                .addComponent(jTextField_KinshipPersona3)
-                                .addComponent(jTextField_BirthdayPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel_Pesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel_Pesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109)))
-                .addGap(47, 47, 47))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(190, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(JLabel_Titulo)
@@ -190,15 +113,44 @@ public class Caso_Uno extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel_AvisoPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(172, 172, 172))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel_Pesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(390, 390, 390))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel_BrthdayFormato, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(389, 389, 389)
-                        .addComponent(jButton_Save)))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel_BrthdayFormato, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel_BirthdayPesona2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_BirthdayPesona1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_KinshipPesona1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_NamePesona1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox_Year, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jButton_Save)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton_Borrar))
+                        .addComponent(jTextField_NamePersona1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField_KinshipPersona1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jComboBox_Hour, 0, 128, Short.MAX_VALUE)
+                            .addGap(2, 2, 2)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jComboBox_Mes, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jComboBox_Dia, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,72 +159,35 @@ public class Caso_Uno extends javax.swing.JFrame {
                 .addComponent(JLabel_Titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel_AvisoPersonas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel_Pesona1)
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel_NamePesona1)
-                                    .addComponent(jTextField_NamePersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel_KinshipPesona1)
-                                    .addComponent(jTextField_KinshipPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel_BirthdayPesona1)
-                                    .addComponent(jTextField_BirthdayPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(88, 88, 88)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel_NamePesona2)
-                                    .addComponent(jTextField_NamePersona2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel_KinshipPesona2)
-                                    .addComponent(jTextField_KinshipPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel_BirthdayPesona2)
-                                    .addComponent(jTextField_BirthdayPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addComponent(jLabel_Pesona2))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel_Pesona3)
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_NamePesona3)
-                            .addComponent(jTextField_NamePersona3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_KinshipPesona3)
-                            .addComponent(jTextField_KinshipPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_BirthdayPesona3)
-                            .addComponent(jTextField_BirthdayPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel_Pesona4)
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_NamePesona4)
-                            .addComponent(jTextField_NamePersona4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_KinshipPesona4)
-                            .addComponent(jTextField_KinshipPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_BirthdayPesona4)
-                            .addComponent(jTextField_BirthdayPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(27, 27, 27)
-                .addComponent(jLabel_BrthdayFormato)
+                .addGap(68, 68, 68)
+                .addComponent(jLabel_Pesona1)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_NamePersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_NamePesona1))
                 .addGap(18, 18, 18)
-                .addComponent(jButton_Save)
-                .addGap(34, 34, 34))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_KinshipPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_KinshipPesona1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_BirthdayPesona1)
+                    .addComponent(jComboBox_Year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_Mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_Dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_BirthdayPesona2)
+                    .addComponent(jComboBox_Hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(jLabel_BrthdayFormato)
+                .addGap(79, 79, 79)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_Save)
+                    .addComponent(jButton_Borrar))
+                .addGap(40, 40, 40))
         );
 
         pack();
@@ -284,65 +199,73 @@ public class Caso_Uno extends javax.swing.JFrame {
         Confirmacion_config objeto2 = new Confirmacion_config();
         BD();
         objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+        Vacia();
     }//GEN-LAST:event_jButton_SaveActionPerformed
 
+    private void jButton_BorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BorrarActionPerformed
+        // Boton Borrar
+        BDB();
+    }//GEN-LAST:event_jButton_BorrarActionPerformed
+            String Horas,Minutos,Segundos,Year,Mes,Dia;
+    public void ObtenTiempo(){
+        Horas = (String) jComboBox_Hour.getSelectedItem();
+        Minutos = (String) jComboBox_Min.getSelectedItem();
+        Segundos = (String) jComboBox_Seg.getSelectedItem();
+        Year = (String) jComboBox_Year.getSelectedItem();
+        Mes = (String) jComboBox_Mes.getSelectedItem();
+        Dia = (String) jComboBox_Dia.getSelectedItem();
+        
+    }
+    
+    public void Vacia(){
+    jTextField_NamePersona1.setText("");
+    jTextField_KinshipPersona1.setText("");
+    jComboBox_Year.setSelectedItem("Año");
+    jComboBox_Mes.setSelectedItem("Mes");
+    jComboBox_Dia.setSelectedItem("Dia");
+    jComboBox_Hour.setSelectedItem("Hour");
+    jComboBox_Min.setSelectedItem("Min");
+    jComboBox_Seg.setSelectedItem("Seg");}
+            
             Caso_uno con = new Caso_uno();
             Connection cn = (Connection) con.conexion();
+            
     public void BD(){
-        Caso_uno objeto = new Caso_uno();
-        
+        ObtenTiempo();
          try{
           for(int i = 0; i < 1;i++){
               if(!jTextField_NamePersona1.getText().equals("")){
         PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_uno(nombre,parentesco,cumpleaños,alarma_conocidos,FK_usuario) VALUES(?,?,?,?,?)");
              pps.setString(1, jTextField_NamePersona1.getText());
              pps.setString(2, jTextField_KinshipPersona1.getText());
-             pps.setString(3, jTextField_BirthdayPersona1.getText());
-             pps.setString(4, "08:50:30");
+             pps.setString(3, Year+"-"+Mes+"-"+Dia);
+             pps.setString(4, Horas+":"+Minutos+":"+Segundos);
              pps.setString(5, Integer.toString(con.Usuarios));
              pps.executeUpdate();
              
              JOptionPane.showMessageDialog(null,"Conocidos guardados con exito!!!");
               }
-              
-              if(!jTextField_NamePersona2.getText().equals("")){
-        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_uno(nombre,parentesco,cumpleaños,alarma_conocidos,FK_usuario) VALUES(?,?,?,?,?)");
-             pps.setString(1, jTextField_NamePersona2.getText());
-             pps.setString(2, jTextField_KinshipPersona2.getText());
-             pps.setString(3, jTextField_BirthdayPersona2.getText());
-             pps.setString(4, "08:50:30");
-             pps.setString(5, Integer.toString(con.Usuarios));
-             pps.executeUpdate();
-             
-              }
-              
-              if(!jTextField_NamePersona3.getText().equals("")){
-        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_uno(nombre,parentesco,cumpleaños,alarma_conocidos,FK_usuario) VALUES(?,?,?,?,?)");
-             pps.setString(1, jTextField_NamePersona3.getText());
-             pps.setString(2, jTextField_KinshipPersona3.getText());
-             pps.setString(3, jTextField_BirthdayPersona3.getText());
-             pps.setString(4, "08:50:30");
-             pps.setString(5, Integer.toString(con.Usuarios));
-             pps.executeUpdate();
-             
-              }
-              
-              if(!jTextField_NamePersona4.getText().equals("")){
-        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_uno(nombre,parentesco,cumpleaños,alarma_conocidos,FK_usuario) VALUES(?,?,?,?,?)");
-             pps.setString(1, jTextField_NamePersona4.getText());
-             pps.setString(2, jTextField_KinshipPersona4.getText());
-             pps.setString(3, jTextField_BirthdayPersona4.getText());
-             pps.setString(4, "08:50:30");
-             pps.setString(5, Integer.toString(con.Usuarios));
-             pps.executeUpdate();
-             
-              }
              }
-          con.Usuarios++;
+          
         }catch(Exception ex){
             Logger.getLogger(Caso_Uno.class.getName()).log(Level.SEVERE, null,ex);
         }
         
+    }
+    
+     public void BDB(){
+         try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_NamePersona1.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("delete from caso_uno where nombre='"+jTextField_NamePersona1.getText()+"'");
+             pps.executeUpdate();
+             JOptionPane.showMessageDialog(null,"Datos borrados con exito!!!");
+              }
+              
+          }
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Uno.class.getName()).log(Level.SEVERE, null,ex);
+        }
     }
     
     
@@ -383,36 +306,22 @@ public class Caso_Uno extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JLabel_Titulo;
+    private javax.swing.JButton jButton_Borrar;
     private javax.swing.JButton jButton_Save;
+    private javax.swing.JComboBox<String> jComboBox_Dia;
+    private javax.swing.JComboBox<String> jComboBox_Hour;
+    private javax.swing.JComboBox<String> jComboBox_Mes;
+    private javax.swing.JComboBox<String> jComboBox_Min;
+    private javax.swing.JComboBox<String> jComboBox_Seg;
+    private javax.swing.JComboBox<String> jComboBox_Year;
     private javax.swing.JLabel jLabel_AvisoPersonas;
     private javax.swing.JLabel jLabel_BirthdayPesona1;
     private javax.swing.JLabel jLabel_BirthdayPesona2;
-    private javax.swing.JLabel jLabel_BirthdayPesona3;
-    private javax.swing.JLabel jLabel_BirthdayPesona4;
     private javax.swing.JLabel jLabel_BrthdayFormato;
     private javax.swing.JLabel jLabel_KinshipPesona1;
-    private javax.swing.JLabel jLabel_KinshipPesona2;
-    private javax.swing.JLabel jLabel_KinshipPesona3;
-    private javax.swing.JLabel jLabel_KinshipPesona4;
     private javax.swing.JLabel jLabel_NamePesona1;
-    private javax.swing.JLabel jLabel_NamePesona2;
-    private javax.swing.JLabel jLabel_NamePesona3;
-    private javax.swing.JLabel jLabel_NamePesona4;
     private javax.swing.JLabel jLabel_Pesona1;
-    private javax.swing.JLabel jLabel_Pesona2;
-    private javax.swing.JLabel jLabel_Pesona3;
-    private javax.swing.JLabel jLabel_Pesona4;
-    private javax.swing.JTextField jTextField_BirthdayPersona1;
-    private javax.swing.JTextField jTextField_BirthdayPersona2;
-    private javax.swing.JTextField jTextField_BirthdayPersona3;
-    private javax.swing.JTextField jTextField_BirthdayPersona4;
     private javax.swing.JTextField jTextField_KinshipPersona1;
-    private javax.swing.JTextField jTextField_KinshipPersona2;
-    private javax.swing.JTextField jTextField_KinshipPersona3;
-    private javax.swing.JTextField jTextField_KinshipPersona4;
     public javax.swing.JTextField jTextField_NamePersona1;
-    private javax.swing.JTextField jTextField_NamePersona2;
-    private javax.swing.JTextField jTextField_NamePersona3;
-    private javax.swing.JTextField jTextField_NamePersona4;
     // End of variables declaration//GEN-END:variables
 }
