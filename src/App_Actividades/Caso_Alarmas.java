@@ -6,6 +6,7 @@
  *
  * TODO: cambiar todos los numero 1 por el ID del usuario que estemos ocupando.
  * TODO: Corregir el error al obtener la hora
+ * TODO: Pasar Borrar al caso Borrar
  */
 package App_Actividades;
 
@@ -26,8 +27,22 @@ public class Caso_Alarmas extends javax.swing.JFrame {
     public Caso_Alarmas() {
         initComponents();
         model = (DefaultTableModel) table.getModel();
+        
+        this.llenarCombos();
+        
         this.limpiarTabla();
         this.consultarAlarmas();
+    }
+    public void llenarCombos() {
+        int i;
+        for( i = 0; i <= 24; i++ ) {
+            comboHoras.addItem( String.valueOf(i) );
+        }
+        for( i = 0; i <= 60; i++ ) {
+            comboMinutos.addItem( String.valueOf(i) );
+            comboSegundos.addItem( String.valueOf(i) );
+            
+        }
     }
 
     public void limpiarTabla() {
@@ -52,11 +67,13 @@ public class Caso_Alarmas extends javax.swing.JFrame {
         lbl_nombre = new javax.swing.JLabel();
         input_nombre = new javax.swing.JTextField();
         lbl_hora = new javax.swing.JLabel();
-        input_hora = new javax.swing.JTextField();
         btn_agregar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         btn_borrar = new javax.swing.JButton();
+        comboHoras = new javax.swing.JComboBox<>();
+        comboMinutos = new javax.swing.JComboBox<>();
+        comboSegundos = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,14 +101,26 @@ public class Caso_Alarmas extends javax.swing.JFrame {
                 "ID: ", "Hora", "Nombre"
             }
         ));
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(table);
 
         btn_borrar.setText("Eliminar");
+        btn_borrar.setEnabled(false);
         btn_borrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_borrarActionPerformed(evt);
             }
         });
+
+        comboHoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "hour" }));
+
+        comboMinutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "min" }));
+
+        comboSegundos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seg" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,16 +130,21 @@ public class Caso_Alarmas extends javax.swing.JFrame {
                 .addGap(210, 210, 210)
                 .addComponent(lbl_title)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_nombre)
                     .addComponent(lbl_hora))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(input_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(input_hora))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(input_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(comboHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(comboMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(comboSegundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_agregar, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -130,8 +164,10 @@ public class Caso_Alarmas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_hora)
-                    .addComponent(input_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_borrar))
+                    .addComponent(btn_borrar)
+                    .addComponent(comboHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboSegundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -142,7 +178,7 @@ public class Caso_Alarmas extends javax.swing.JFrame {
 
     private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
         String nombre = input_nombre.getText();
-        String hora = input_hora.getText();
+        String hora = comboHoras.getSelectedItem() + ":" + comboMinutos.getSelectedItem() + ":" + comboSegundos.getSelectedItem();
 
         boolean insertado = acciones.insertarAlarma(nombre, hora, id);
         if (insertado == true)
@@ -164,11 +200,17 @@ public class Caso_Alarmas extends javax.swing.JFrame {
         if( eliminado == true ) {
             this.limpiarTabla();
             this.consultarAlarmas();
+            
+            btn_borrar.setEnabled( false );
         }
         else {
             JOptionPane.showMessageDialog(null, "ERROR - La alarma no se pudo eliminar");
         }
     }//GEN-LAST:event_btn_borrarActionPerformed
+
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+        btn_borrar.setEnabled( true );
+    }//GEN-LAST:event_tableMouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -212,7 +254,9 @@ public class Caso_Alarmas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_agregar;
     private javax.swing.JButton btn_borrar;
-    private javax.swing.JTextField input_hora;
+    private javax.swing.JComboBox<String> comboHoras;
+    private javax.swing.JComboBox<String> comboMinutos;
+    private javax.swing.JComboBox<String> comboSegundos;
     private javax.swing.JTextField input_nombre;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_hora;
