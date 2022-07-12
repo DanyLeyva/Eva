@@ -5,6 +5,14 @@
  */
 package App_Menu;
 
+import App_Menu_Clases.Caso_cinco;
+import App_Menu_Clases.Confirmacion_config;
+import com.mysql.jdbc.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -27,22 +35,139 @@ public class Caso_Cinco extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_TituloDatos = new javax.swing.JLabel();
+        jTextField_Direccion = new javax.swing.JTextField();
+        jTextField_Alarma = new javax.swing.JTextField();
+        jTextField_Birthday = new javax.swing.JTextField();
+        jButton_SaveDP = new javax.swing.JButton();
+        jLabel_Direccion = new javax.swing.JLabel();
+        jLabel_Birthday = new javax.swing.JLabel();
+        jLabel_Alarma = new javax.swing.JLabel();
+        jLabel_FormatoTiempo = new javax.swing.JLabel();
+        jLabel_AvisoDatos = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel_TituloDatos.setText("Hola de nuevo usuario aqui almacenare algunos datos personales!!!");
+
+        jButton_SaveDP.setText("Guardar");
+        jButton_SaveDP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SaveDPActionPerformed(evt);
+            }
+        });
+
+        jLabel_Direccion.setText("Direccion");
+
+        jLabel_Birthday.setText("Cumpleaños");
+
+        jLabel_Alarma.setText("Alarma para recordar datos");
+
+        jLabel_FormatoTiempo.setText("Formato de las alarmas: HH : MM ");
+
+        jLabel_AvisoDatos.setText("Recuerda que en cualquier momento puedes modificar los datos desde el menu!!!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton_SaveDP)
+                .addGap(390, 390, 390))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel_Alarma, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_Birthday, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel_Direccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField_Direccion)
+                            .addComponent(jTextField_Birthday)
+                            .addComponent(jTextField_Alarma, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_FormatoTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(222, 222, 222)
+                        .addComponent(jLabel_TituloDatos))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jLabel_AvisoDatos)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel_TituloDatos)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_AvisoDatos)
+                        .addGap(35, 35, 35)
+                        .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel_Direccion)
+                        .addGap(59, 59, 59)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_Birthday))
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Alarma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_Alarma))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(jLabel_FormatoTiempo)
+                .addGap(38, 38, 38)
+                .addComponent(jButton_SaveDP)
+                .addGap(110, 110, 110))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_SaveDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SaveDPActionPerformed
+        // Boton Save
+        Caso_cinco objeto = new Caso_cinco();
+        Confirmacion_config objeto2 = new Confirmacion_config();
+        BD();
+        objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+    }//GEN-LAST:event_jButton_SaveDPActionPerformed
+    
+    Caso_cinco con = new Caso_cinco();
+    Connection cn = (Connection) con.conexion();
+    
+    public void BD(){
+        try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_Direccion.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_cinco(direccion,cumpleaños,alarma_datos,FK_usuario) VALUES(?,?,?,?)");
+             pps.setString(1, jTextField_Direccion.getText());
+             pps.setString(2, jTextField_Birthday.getText());
+             pps.setString(3, jTextField_Alarma.getText());
+             pps.setString(4, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+             JOptionPane.showMessageDialog(null,"Datos guardados con exito!!!");
+              }
+
+              }
+          con.Usuarios++;
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Cinco.class.getName()).log(Level.SEVERE, null,ex);
+        }
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -79,5 +204,15 @@ public class Caso_Cinco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_SaveDP;
+    private javax.swing.JLabel jLabel_Alarma;
+    private javax.swing.JLabel jLabel_AvisoDatos;
+    private javax.swing.JLabel jLabel_Birthday;
+    private javax.swing.JLabel jLabel_Direccion;
+    private javax.swing.JLabel jLabel_FormatoTiempo;
+    private javax.swing.JLabel jLabel_TituloDatos;
+    private javax.swing.JTextField jTextField_Alarma;
+    private javax.swing.JTextField jTextField_Birthday;
+    private javax.swing.JTextField jTextField_Direccion;
     // End of variables declaration//GEN-END:variables
 }

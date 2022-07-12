@@ -5,6 +5,14 @@
  */
 package App_Menu;
 
+import App_Menu_Clases.Caso_cuatro;
+import App_Menu_Clases.Confirmacion_config;
+import com.mysql.jdbc.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -27,22 +35,301 @@ public class Caso_Cuatro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_TituloNumeros = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel_NumeroPersona1 = new javax.swing.JLabel();
+        jLabel_NumeroPersona2 = new javax.swing.JLabel();
+        jLabel_NumeroPersona3 = new javax.swing.JLabel();
+        jLabel_NumeroPersona4 = new javax.swing.JLabel();
+        jTextField_NumberPersona1 = new javax.swing.JTextField();
+        jLabel_NamePesona2 = new javax.swing.JLabel();
+        jLabel_KinshipPesona2 = new javax.swing.JLabel();
+        jLabel_BirthdayPesona2 = new javax.swing.JLabel();
+        jTextField_NamePersona2 = new javax.swing.JTextField();
+        jTextField_KinshipPersona2 = new javax.swing.JTextField();
+        jTextField_NumberPersona2 = new javax.swing.JTextField();
+        jLabel_NamePesona1 = new javax.swing.JLabel();
+        jLabel_KinshipPesona1 = new javax.swing.JLabel();
+        jLabel_BirthdayPesona1 = new javax.swing.JLabel();
+        jTextField_NamePersona1 = new javax.swing.JTextField();
+        jTextField_KinshipPersona1 = new javax.swing.JTextField();
+        jTextField_KinshipPersona3 = new javax.swing.JTextField();
+        jLabel_NamePesona3 = new javax.swing.JLabel();
+        jLabel_KinshipPesona3 = new javax.swing.JLabel();
+        jLabel_BirthdayPesona3 = new javax.swing.JLabel();
+        jTextField_NamePersona4 = new javax.swing.JTextField();
+        jTextField_KinshipPersona4 = new javax.swing.JTextField();
+        jTextField_NumberPersona4 = new javax.swing.JTextField();
+        jLabel_NamePesona4 = new javax.swing.JLabel();
+        jLabel_KinshipPesona4 = new javax.swing.JLabel();
+        jLabel_BirthdayPesona4 = new javax.swing.JLabel();
+        jTextField_NamePersona3 = new javax.swing.JTextField();
+        jTextField_NumberPersona3 = new javax.swing.JTextField();
+        jButton_SaveNumber = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel_TituloNumeros.setText("Añade numeros de familiares o amigos en caso de emergencia");
+
+        jLabel1.setText("Recuerda que en cualquier momento puedes agregar mas numeros de emergencia desde el menu!!!");
+
+        jLabel_NumeroPersona1.setText("Persona 1");
+
+        jLabel_NumeroPersona2.setText("Persona 2");
+
+        jLabel_NumeroPersona3.setText("Persona 3");
+
+        jLabel_NumeroPersona4.setText("Persona 4");
+
+        jLabel_NamePesona2.setText("Nombre");
+
+        jLabel_KinshipPesona2.setText("Parentesco");
+
+        jLabel_BirthdayPesona2.setText("Numero");
+
+        jLabel_NamePesona1.setText("Nombre");
+
+        jLabel_KinshipPesona1.setText("Parentesco");
+
+        jLabel_BirthdayPesona1.setText("Numero");
+
+        jLabel_NamePesona3.setText("Nombre");
+
+        jLabel_KinshipPesona3.setText("Parentesco");
+
+        jLabel_BirthdayPesona3.setText("Numero");
+
+        jLabel_NamePesona4.setText("Nombre");
+
+        jLabel_KinshipPesona4.setText("Parentesco");
+
+        jLabel_BirthdayPesona4.setText("Numero");
+
+        jButton_SaveNumber.setText("Guardar");
+        jButton_SaveNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SaveNumberActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGap(192, 192, 192)
+                                        .addComponent(jLabel_NumeroPersona1)
+                                        .addGap(124, 124, 124))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addComponent(jLabel_KinshipPesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel_NamePesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel_BirthdayPesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(26, 26, 26)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jTextField_NamePersona1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextField_KinshipPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextField_NumberPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addComponent(jLabel_KinshipPesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel_NamePesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel_BirthdayPesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(26, 26, 26)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jTextField_KinshipPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextField_NamePersona2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextField_NumberPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(191, 191, 191)
+                                                .addComponent(jLabel_NumeroPersona2)))
+                                        .addGap(25, 25, 25)))
+                                .addGap(54, 54, 54)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel_KinshipPesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel_NamePesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel_BirthdayPesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(26, 26, 26)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField_NamePersona3, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField_KinshipPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField_NumberPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel_KinshipPesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel_NamePesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel_BirthdayPesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(26, 26, 26)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField_KinshipPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField_NamePersona4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField_NumberPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(198, 198, 198)
+                                        .addComponent(jLabel_NumeroPersona3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(194, 194, 194)
+                                        .addComponent(jLabel_NumeroPersona4))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(210, 210, 210)
+                                .addComponent(jLabel_TituloNumeros))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(378, 378, 378)
+                        .addComponent(jButton_SaveNumber)))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel_TituloNumeros)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel_NumeroPersona1)
+                        .addGap(188, 188, 188)
+                        .addComponent(jLabel_NumeroPersona2))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_NumeroPersona3)
+                                .addGap(188, 188, 188)
+                                .addComponent(jLabel_NumeroPersona4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_NamePesona4)
+                                    .addComponent(jTextField_NamePersona3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_KinshipPesona4)
+                                    .addComponent(jTextField_KinshipPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_BirthdayPesona4)
+                                    .addComponent(jTextField_NumberPersona3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(88, 88, 88)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_NamePesona3)
+                                    .addComponent(jTextField_NamePersona4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_KinshipPesona3)
+                                    .addComponent(jTextField_KinshipPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_BirthdayPesona3)
+                                    .addComponent(jTextField_NumberPersona4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(46, 46, 46)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel_NamePesona1)
+                                .addComponent(jTextField_NamePersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel_KinshipPesona1)
+                                .addComponent(jTextField_KinshipPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel_BirthdayPesona1)
+                                .addComponent(jTextField_NumberPersona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(88, 88, 88)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel_NamePesona2)
+                                .addComponent(jTextField_NamePersona2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel_KinshipPesona2)
+                                .addComponent(jTextField_KinshipPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(28, 28, 28)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel_BirthdayPesona2)
+                                .addComponent(jTextField_NumberPersona2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(38, 38, 38)
+                .addComponent(jButton_SaveNumber)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_SaveNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SaveNumberActionPerformed
+        // Boton Save
+        Caso_cuatro objeto = new Caso_cuatro();
+        Confirmacion_config objeto2 = new Confirmacion_config();
+        BD();
+        objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+        
+    }//GEN-LAST:event_jButton_SaveNumberActionPerformed
+    Caso_cuatro con = new Caso_cuatro();
+    Connection cn = (Connection) con.conexion();
+    
+    public void BD(){
+        
+        try{
+          for(int i = 0; i < 1;i++){
+             if(!jTextField_NamePersona1.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_cuatro(nombre,parentesco,numero,FK_usuario) VALUES(?,?,?,?)");
+             pps.setString(1, jTextField_NamePersona1.getText());
+             pps.setString(2, jTextField_KinshipPersona1.getText());
+             pps.setString(3, jTextField_NumberPersona1.getText());
+             pps.setString(4, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+             JOptionPane.showMessageDialog(null,"Contactos de emergencia guardados con exito!!!");
+              }
+             
+             if(!jTextField_NamePersona2.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_cuatro(nombre,parentesco,numero,FK_usuario) VALUES(?,?,?,?)");
+             pps.setString(1, jTextField_NamePersona2.getText());
+             pps.setString(2, jTextField_KinshipPersona2.getText());
+             pps.setString(3, jTextField_NumberPersona2.getText());
+             pps.setString(4, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+             
+             if(!jTextField_NamePersona3.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_cuatro(nombre,parentesco,numero,FK_usuario) VALUES(?,?,?,?)");
+             pps.setString(1, jTextField_NamePersona3.getText());
+             pps.setString(2, jTextField_KinshipPersona3.getText());
+             pps.setString(3, jTextField_NumberPersona3.getText());
+             pps.setString(4, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+             
+             if(!jTextField_NamePersona4.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_cuatro(nombre,parentesco,numero,FK_usuario) VALUES(?,?,?,?)");
+             pps.setString(1, jTextField_NamePersona4.getText());
+             pps.setString(2, jTextField_KinshipPersona4.getText());
+             pps.setString(3, jTextField_NumberPersona4.getText());
+             pps.setString(4, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+
+              }
+          con.Usuarios++;
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Cuatro.class.getName()).log(Level.SEVERE, null,ex);
+        }
+        
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -79,5 +366,36 @@ public class Caso_Cuatro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_SaveNumber;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel_BirthdayPesona1;
+    private javax.swing.JLabel jLabel_BirthdayPesona2;
+    private javax.swing.JLabel jLabel_BirthdayPesona3;
+    private javax.swing.JLabel jLabel_BirthdayPesona4;
+    private javax.swing.JLabel jLabel_KinshipPesona1;
+    private javax.swing.JLabel jLabel_KinshipPesona2;
+    private javax.swing.JLabel jLabel_KinshipPesona3;
+    private javax.swing.JLabel jLabel_KinshipPesona4;
+    private javax.swing.JLabel jLabel_NamePesona1;
+    private javax.swing.JLabel jLabel_NamePesona2;
+    private javax.swing.JLabel jLabel_NamePesona3;
+    private javax.swing.JLabel jLabel_NamePesona4;
+    private javax.swing.JLabel jLabel_NumeroPersona1;
+    private javax.swing.JLabel jLabel_NumeroPersona2;
+    private javax.swing.JLabel jLabel_NumeroPersona3;
+    private javax.swing.JLabel jLabel_NumeroPersona4;
+    private javax.swing.JLabel jLabel_TituloNumeros;
+    private javax.swing.JTextField jTextField_KinshipPersona1;
+    private javax.swing.JTextField jTextField_KinshipPersona2;
+    private javax.swing.JTextField jTextField_KinshipPersona3;
+    private javax.swing.JTextField jTextField_KinshipPersona4;
+    public javax.swing.JTextField jTextField_NamePersona1;
+    private javax.swing.JTextField jTextField_NamePersona2;
+    public javax.swing.JTextField jTextField_NamePersona3;
+    private javax.swing.JTextField jTextField_NamePersona4;
+    private javax.swing.JTextField jTextField_NumberPersona1;
+    private javax.swing.JTextField jTextField_NumberPersona2;
+    private javax.swing.JTextField jTextField_NumberPersona3;
+    private javax.swing.JTextField jTextField_NumberPersona4;
     // End of variables declaration//GEN-END:variables
 }

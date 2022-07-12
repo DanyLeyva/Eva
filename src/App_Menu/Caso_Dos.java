@@ -6,6 +6,16 @@
 
 package App_Menu;
 
+import App_Menu_Clases.Caso_dos;
+import App_Menu_Clases.Caso_uno;
+import App_Menu_Clases.ConexionBD;
+import App_Menu_Clases.Confirmacion_config;
+import com.mysql.jdbc.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -26,22 +36,347 @@ public class Caso_Dos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_TituloPasatiempo = new javax.swing.JLabel();
+        jLabel_Pasatiempo1 = new javax.swing.JLabel();
+        jLabel_Pasatiempo2 = new javax.swing.JLabel();
+        jLabel_Pasatiempo3 = new javax.swing.JLabel();
+        jLabel_Pasatiempo4 = new javax.swing.JLabel();
+        jLabel_Pasatiempo5 = new javax.swing.JLabel();
+        jLabel_Pasatiempo6 = new javax.swing.JLabel();
+        jLabel_Pasatiempo7 = new javax.swing.JLabel();
+        jLabel_Pasatiempo8 = new javax.swing.JLabel();
+        jLabel_Pasatiempo9 = new javax.swing.JLabel();
+        jLabel_Pasatiempo10 = new javax.swing.JLabel();
+        jTextField_Pasatiempo1 = new javax.swing.JTextField();
+        jTextField_Pasatiempo2 = new javax.swing.JTextField();
+        jTextField_Pasatiempo3 = new javax.swing.JTextField();
+        jTextField_Pasatiempo4 = new javax.swing.JTextField();
+        jTextField_Pasatiempo5 = new javax.swing.JTextField();
+        jTextField_Pasatiempo6 = new javax.swing.JTextField();
+        jTextField_Pasatiempo7 = new javax.swing.JTextField();
+        jTextField_Pasatiempo8 = new javax.swing.JTextField();
+        jTextField_Pasatiempo9 = new javax.swing.JTextField();
+        jTextField_Pasatiempo10 = new javax.swing.JTextField();
+        jButton_SavePasatiempo = new javax.swing.JButton();
+        jLabel_AvisoPasatiempos = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(866, 591));
+
+        jLabel_TituloPasatiempo.setText("Escribe tus pasatiempo preferidos");
+
+        jLabel_Pasatiempo1.setText("1");
+
+        jLabel_Pasatiempo2.setText("2");
+
+        jLabel_Pasatiempo3.setText("3");
+
+        jLabel_Pasatiempo4.setText("4");
+
+        jLabel_Pasatiempo5.setText("5");
+
+        jLabel_Pasatiempo6.setText("6");
+
+        jLabel_Pasatiempo7.setText("7");
+
+        jLabel_Pasatiempo8.setText("8");
+
+        jLabel_Pasatiempo9.setText("9");
+
+        jLabel_Pasatiempo10.setText("10");
+
+        jButton_SavePasatiempo.setText("Guardar");
+        jButton_SavePasatiempo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SavePasatiempoActionPerformed(evt);
+            }
+        });
+
+        jLabel_AvisoPasatiempos.setText("Recuerda que en cualquier momento puedes agregar mas pasatiempos desde el menu!!!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(77, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo7))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo8))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo9))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_Pasatiempo10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField_Pasatiempo10, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(69, 69, 69))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton_SavePasatiempo)
+                        .addGap(386, 386, 386))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel_TituloPasatiempo)
+                        .addGap(316, 316, 316))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel_AvisoPasatiempos, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(167, 167, 167))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel_TituloPasatiempo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel_AvisoPasatiempos)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo9, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_Pasatiempo10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Pasatiempo10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jButton_SavePasatiempo)
+                .addGap(25, 25, 25))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_SavePasatiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SavePasatiempoActionPerformed
+        // Boton save
+        Caso_dos objeto = new Caso_dos();
+        Confirmacion_config objeto2 = new Confirmacion_config();
+        BD();
+        objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+    }//GEN-LAST:event_jButton_SavePasatiempoActionPerformed
+
+    public void save(){
+        Caso_dos objeto = new Caso_dos();
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo1.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo2.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo3.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo4.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo5.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo6.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo7.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo8.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo9.getText();
+                break;
+            } 
+        }
+        for (int i = 0; i < (objeto.Pasatiempos.length); i++) {
+            if(objeto.Pasatiempos[i]== null){
+                objeto.Pasatiempos[i] = jTextField_Pasatiempo10.getText();
+                break;
+            } 
+        }
+    }
+    
+    Caso_dos con = new Caso_dos();
+    Connection cn = (Connection) con.conexion();
+    
+    public void BD(){
+        
+         try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_Pasatiempo1.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo1.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+             
+             JOptionPane.showMessageDialog(null,"Pasatiempos guardados con exito!!!");
+              }
+              
+              if(!jTextField_Pasatiempo2.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo2.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo3.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo3.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo4.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatieno,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo4.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo5.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo5.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo6.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo6.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo7.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo7.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo8.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo8.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo9.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo9.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_Pasatiempo10.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_dos(hobbie,alarma_pasatienpo,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Pasatiempo10.getText());
+             pps.setString(2, "08:50:30");
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+          
+          }
+          con.Usuarios++;
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Dos.class.getName()).log(Level.SEVERE, null,ex);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -78,6 +413,29 @@ public class Caso_Dos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_SavePasatiempo;
+    private javax.swing.JLabel jLabel_AvisoPasatiempos;
+    private javax.swing.JLabel jLabel_Pasatiempo1;
+    private javax.swing.JLabel jLabel_Pasatiempo10;
+    private javax.swing.JLabel jLabel_Pasatiempo2;
+    private javax.swing.JLabel jLabel_Pasatiempo3;
+    private javax.swing.JLabel jLabel_Pasatiempo4;
+    private javax.swing.JLabel jLabel_Pasatiempo5;
+    private javax.swing.JLabel jLabel_Pasatiempo6;
+    private javax.swing.JLabel jLabel_Pasatiempo7;
+    private javax.swing.JLabel jLabel_Pasatiempo8;
+    private javax.swing.JLabel jLabel_Pasatiempo9;
+    private javax.swing.JLabel jLabel_TituloPasatiempo;
+    private javax.swing.JTextField jTextField_Pasatiempo1;
+    private javax.swing.JTextField jTextField_Pasatiempo10;
+    private javax.swing.JTextField jTextField_Pasatiempo2;
+    private javax.swing.JTextField jTextField_Pasatiempo3;
+    private javax.swing.JTextField jTextField_Pasatiempo4;
+    private javax.swing.JTextField jTextField_Pasatiempo5;
+    private javax.swing.JTextField jTextField_Pasatiempo6;
+    private javax.swing.JTextField jTextField_Pasatiempo7;
+    private javax.swing.JTextField jTextField_Pasatiempo8;
+    private javax.swing.JTextField jTextField_Pasatiempo9;
     // End of variables declaration//GEN-END:variables
 
 }

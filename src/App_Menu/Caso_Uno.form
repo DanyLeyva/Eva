@@ -23,13 +23,340 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel_BirthdayPesona1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel_KinshipPesona1" min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="jLabel_NamePesona1" min="-2" pref="68" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jTextField_NamePersona1" max="32767" attributes="0"/>
+                          <Component id="jTextField_KinshipPersona1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextField_BirthdayPersona1" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel_BirthdayPesona2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel_KinshipPesona2" alignment="1" min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="jLabel_NamePesona2" alignment="1" min="-2" pref="68" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jTextField_KinshipPersona2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextField_NamePersona2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextField_BirthdayPersona2" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
+                      <Component id="jLabel_Pesona2" min="-2" pref="68" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                      <Component id="jLabel_Pesona1" min="-2" pref="68" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel_BirthdayPesona4" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_KinshipPesona4" alignment="1" min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="jLabel_NamePesona4" alignment="1" min="-2" pref="68" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jTextField_KinshipPersona4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_NamePersona4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_BirthdayPersona4" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel_BirthdayPesona3" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_KinshipPesona3" alignment="1" min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="jLabel_NamePesona3" alignment="1" min="-2" pref="68" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jTextField_NamePersona3" max="32767" attributes="0"/>
+                              <Component id="jTextField_KinshipPersona3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_BirthdayPersona3" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel_Pesona4" min="-2" pref="68" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel_Pesona3" min="-2" pref="68" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="JLabel_Titulo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="226" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel_AvisoPersonas" min="-2" pref="504" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="jLabel_BrthdayFormato" min="-2" pref="238" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="jButton_Save" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="JLabel_Titulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel_AvisoPersonas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel_Pesona1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel_NamePesona1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_NamePersona1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel_KinshipPesona1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_KinshipPersona1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel_BirthdayPesona1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_BirthdayPersona1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel_NamePesona2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_NamePersona2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel_KinshipPesona2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_KinshipPersona2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel_BirthdayPesona2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_BirthdayPersona2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="jLabel_Pesona2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel_Pesona3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel_NamePesona3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_NamePersona3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel_KinshipPesona3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_KinshipPersona3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel_BirthdayPesona3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_BirthdayPersona3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="jLabel_Pesona4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel_NamePesona4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_NamePersona4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel_KinshipPesona4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_KinshipPersona4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel_BirthdayPesona4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_BirthdayPersona4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="jLabel_BrthdayFormato" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jButton_Save" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="JLabel_Titulo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dime el nombre y cumplea&#xf1;os de tus familiares o amigos mas cercanos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_Pesona1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Persona 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_NamePesona1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Parentesco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="cumplea&#xf1;os"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_NamePersona1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_KinshipPersona1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_BirthdayPersona1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_Pesona2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Persona 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_NamePesona2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Parentesco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="cumplea&#xf1;os"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_NamePersona2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_KinshipPersona2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_BirthdayPersona2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_Pesona3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Persona 3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_NamePesona3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Parentesco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="cumplea&#xf1;os"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_NamePersona3">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_KinshipPersona3">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_BirthdayPersona3">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_NamePersona4">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_KinshipPersona4">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_BirthdayPersona4">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_Pesona4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Persona 4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_NamePesona4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Parentesco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="cumplea&#xf1;os"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_BrthdayFormato">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Formato del cumplea&#xf1;os: YYYY / MM / DD"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_AvisoPersonas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Recuerda que en cualquier momento puedes agregar mas conocidos desde el menu!!!"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_Save">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Guadar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_SaveActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
 </Form>

@@ -5,6 +5,14 @@
  */
 package App_Menu;
 
+import App_Menu_Clases.Caso_seis;
+import App_Menu_Clases.Confirmacion_config;
+import com.mysql.jdbc.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -27,22 +35,349 @@ public class Caso_Seis extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_TituloMedicinas = new javax.swing.JLabel();
+        jLabel_AvisoMedicinas = new javax.swing.JLabel();
+        jLabel_Pesona1 = new javax.swing.JLabel();
+        jLabel_NamePesona1 = new javax.swing.JLabel();
+        jLabel_KinshipPesona1 = new javax.swing.JLabel();
+        jTextField_NameMedicina1 = new javax.swing.JTextField();
+        jTextField_AlarmaMedicina1 = new javax.swing.JTextField();
+        jLabel_Pesona2 = new javax.swing.JLabel();
+        jLabel_NamePesona2 = new javax.swing.JLabel();
+        jLabel_KinshipPesona2 = new javax.swing.JLabel();
+        jTextField_NameMedicina2 = new javax.swing.JTextField();
+        jTextField_AlarmaMedicina2 = new javax.swing.JTextField();
+        jLabel_NamePesona3 = new javax.swing.JLabel();
+        jLabel_KinshipPesona3 = new javax.swing.JLabel();
+        jTextField_NameMedicina3 = new javax.swing.JTextField();
+        jTextField_AlarmaMedicina3 = new javax.swing.JTextField();
+        jLabel_Pesona3 = new javax.swing.JLabel();
+        jLabel_Pesona4 = new javax.swing.JLabel();
+        jLabel_Pesona5 = new javax.swing.JLabel();
+        jLabel_NamePesona4 = new javax.swing.JLabel();
+        jLabel_KinshipPesona4 = new javax.swing.JLabel();
+        jTextField_NameMedicina4 = new javax.swing.JTextField();
+        jTextField_AlarmaMedicina4 = new javax.swing.JTextField();
+        jLabel_Pesona6 = new javax.swing.JLabel();
+        jLabel_NamePesona5 = new javax.swing.JLabel();
+        jLabel_KinshipPesona5 = new javax.swing.JLabel();
+        jTextField_NameMedicina5 = new javax.swing.JTextField();
+        jTextField_AlarmaMedicina5 = new javax.swing.JTextField();
+        jLabel_NamePesona6 = new javax.swing.JLabel();
+        jLabel_KinshipPesona6 = new javax.swing.JLabel();
+        jTextField_NameMedicina6 = new javax.swing.JTextField();
+        jTextField_AlarmaMedicina6 = new javax.swing.JTextField();
+        jButton_SaveMedicinas = new javax.swing.JButton();
+        jLabel_FormatoTiempo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel_TituloMedicinas.setText(" Dime a que hora te tocan tus medicinas y el nombre de cada una de ellas");
+
+        jLabel_AvisoMedicinas.setText("Recuerda que en cualquier momento puedes agregar mas medicinas desde el menu!!!");
+
+        jLabel_Pesona1.setText("Medicina 1");
+
+        jLabel_NamePesona1.setText("Nombre");
+
+        jLabel_KinshipPesona1.setText("Alarma para la medicina");
+
+        jLabel_Pesona2.setText("Medicina 2");
+
+        jLabel_NamePesona2.setText("Nombre");
+
+        jLabel_KinshipPesona2.setText("Alarma para la medicina");
+
+        jLabel_NamePesona3.setText("Nombre");
+
+        jLabel_KinshipPesona3.setText("Alarma para la medicina");
+
+        jLabel_Pesona3.setText("Medicina 2");
+
+        jLabel_Pesona4.setText("Medicina 6");
+
+        jLabel_Pesona5.setText("Medicina 4");
+
+        jLabel_NamePesona4.setText("Nombre");
+
+        jLabel_KinshipPesona4.setText("Alarma para la medicina");
+
+        jLabel_Pesona6.setText("Medicina 5");
+
+        jLabel_NamePesona5.setText("Nombre");
+
+        jLabel_KinshipPesona5.setText("Alarma para la medicina");
+
+        jLabel_NamePesona6.setText("Nombre");
+
+        jLabel_KinshipPesona6.setText("Alarma para la medicina");
+
+        jButton_SaveMedicinas.setText("Guardar");
+        jButton_SaveMedicinas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SaveMedicinasActionPerformed(evt);
+            }
+        });
+
+        jLabel_FormatoTiempo.setText("Formato de las alarmas: HH : MM ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(193, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel_TituloMedicinas)
+                        .addGap(232, 232, 232))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel_AvisoMedicinas)
+                        .addGap(186, 186, 186))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(264, 264, 264)
+                                    .addComponent(jLabel_Pesona2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(jLabel_KinshipPesona3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel_NamePesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(26, 26, 26)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jTextField_NameMedicina3, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                                                .addComponent(jTextField_AlarmaMedicina3)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(264, 264, 264)
+                                            .addComponent(jLabel_Pesona3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel_KinshipPesona2, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                            .addComponent(jLabel_NamePesona2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jTextField_AlarmaMedicina2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField_NameMedicina2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_FormatoTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel_KinshipPesona1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                        .addComponent(jLabel_NamePesona1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(26, 26, 26)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField_NameMedicina1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                                        .addComponent(jTextField_AlarmaMedicina1))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(282, 282, 282)
+                        .addComponent(jLabel_Pesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(264, 264, 264)
+                                .addComponent(jLabel_Pesona6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel_KinshipPesona6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel_NamePesona6, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(26, 26, 26)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField_NameMedicina6)
+                                            .addComponent(jTextField_AlarmaMedicina6, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(264, 264, 264)
+                                        .addComponent(jLabel_Pesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel_KinshipPesona5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel_NamePesona5, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(26, 26, 26)
+                                    .addComponent(jTextField_AlarmaMedicina5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jTextField_NameMedicina5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel_KinshipPesona4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel_NamePesona4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(26, 26, 26)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextField_NameMedicina4)
+                                .addComponent(jTextField_AlarmaMedicina4, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(264, 264, 264)
+                        .addComponent(jLabel_Pesona5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(372, 372, 372)
+                .addComponent(jButton_SaveMedicinas)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel_TituloMedicinas)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel_AvisoMedicinas)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel_FormatoTiempo)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel_Pesona1)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_NamePesona1)
+                            .addComponent(jTextField_NameMedicina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_KinshipPesona1)
+                            .addComponent(jTextField_AlarmaMedicina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel_Pesona2)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_NamePesona2)
+                            .addComponent(jTextField_NameMedicina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_KinshipPesona2)
+                            .addComponent(jTextField_AlarmaMedicina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel_Pesona3)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_NamePesona3)
+                            .addComponent(jTextField_NameMedicina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_KinshipPesona3)
+                            .addComponent(jTextField_AlarmaMedicina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel_Pesona5)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_NamePesona4)
+                            .addComponent(jTextField_NameMedicina4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_KinshipPesona4)
+                            .addComponent(jTextField_AlarmaMedicina4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel_Pesona6)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_NamePesona5)
+                            .addComponent(jTextField_NameMedicina5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_KinshipPesona5)
+                            .addComponent(jTextField_AlarmaMedicina5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel_Pesona4)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_NamePesona6)
+                            .addComponent(jTextField_NameMedicina6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_KinshipPesona6)
+                            .addComponent(jTextField_AlarmaMedicina6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(jButton_SaveMedicinas)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_SaveMedicinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SaveMedicinasActionPerformed
+        // Boton Save
+        Caso_seis objeto = new Caso_seis();
+        Confirmacion_config objeto2 = new Confirmacion_config();
+        BD();
+        objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+        
+    }//GEN-LAST:event_jButton_SaveMedicinasActionPerformed
+
+    Caso_seis con = new Caso_seis();
+    Connection cn = (Connection) con.conexion();
+    
+    public void BD(){
+        try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_NameMedicina1.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina1.getText());
+             pps.setString(2, jTextField_AlarmaMedicina1.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+             JOptionPane.showMessageDialog(null,"Medicinas guardados con exito!!!");
+              }
+              
+              if(!jTextField_NameMedicina2.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina2.getText());
+             pps.setString(2, jTextField_AlarmaMedicina2.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_NameMedicina3.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seiso(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina3.getText());
+             pps.setString(2, jTextField_AlarmaMedicina3.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_NameMedicina3.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina3.getText());
+             pps.setString(2, jTextField_AlarmaMedicina3.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_NameMedicina4.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina4.getText());
+             pps.setString(2, jTextField_AlarmaMedicina4.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_NameMedicina5.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina5.getText());
+             pps.setString(2, jTextField_AlarmaMedicina5.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              
+              if(!jTextField_NameMedicina6.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina6.getText());
+             pps.setString(2, jTextField_AlarmaMedicina6.getText());
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+
+              }
+          con.Usuarios++;
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Seis.class.getName()).log(Level.SEVERE, null,ex);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -79,5 +414,39 @@ public class Caso_Seis extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_SaveMedicinas;
+    private javax.swing.JLabel jLabel_AvisoMedicinas;
+    private javax.swing.JLabel jLabel_FormatoTiempo;
+    private javax.swing.JLabel jLabel_KinshipPesona1;
+    private javax.swing.JLabel jLabel_KinshipPesona2;
+    private javax.swing.JLabel jLabel_KinshipPesona3;
+    private javax.swing.JLabel jLabel_KinshipPesona4;
+    private javax.swing.JLabel jLabel_KinshipPesona5;
+    private javax.swing.JLabel jLabel_KinshipPesona6;
+    private javax.swing.JLabel jLabel_NamePesona1;
+    private javax.swing.JLabel jLabel_NamePesona2;
+    private javax.swing.JLabel jLabel_NamePesona3;
+    private javax.swing.JLabel jLabel_NamePesona4;
+    private javax.swing.JLabel jLabel_NamePesona5;
+    private javax.swing.JLabel jLabel_NamePesona6;
+    private javax.swing.JLabel jLabel_Pesona1;
+    private javax.swing.JLabel jLabel_Pesona2;
+    private javax.swing.JLabel jLabel_Pesona3;
+    private javax.swing.JLabel jLabel_Pesona4;
+    private javax.swing.JLabel jLabel_Pesona5;
+    private javax.swing.JLabel jLabel_Pesona6;
+    private javax.swing.JLabel jLabel_TituloMedicinas;
+    private javax.swing.JTextField jTextField_AlarmaMedicina1;
+    private javax.swing.JTextField jTextField_AlarmaMedicina2;
+    private javax.swing.JTextField jTextField_AlarmaMedicina3;
+    private javax.swing.JTextField jTextField_AlarmaMedicina4;
+    private javax.swing.JTextField jTextField_AlarmaMedicina5;
+    private javax.swing.JTextField jTextField_AlarmaMedicina6;
+    public javax.swing.JTextField jTextField_NameMedicina1;
+    public javax.swing.JTextField jTextField_NameMedicina2;
+    public javax.swing.JTextField jTextField_NameMedicina3;
+    public javax.swing.JTextField jTextField_NameMedicina4;
+    public javax.swing.JTextField jTextField_NameMedicina5;
+    public javax.swing.JTextField jTextField_NameMedicina6;
     // End of variables declaration//GEN-END:variables
 }
