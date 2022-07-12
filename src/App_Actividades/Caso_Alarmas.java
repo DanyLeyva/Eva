@@ -70,7 +70,6 @@ public class Caso_Alarmas extends javax.swing.JFrame {
         btn_agregar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
-        btn_borrar = new javax.swing.JButton();
         comboHoras = new javax.swing.JComboBox<>();
         comboMinutos = new javax.swing.JComboBox<>();
         comboSegundos = new javax.swing.JComboBox<>();
@@ -108,14 +107,6 @@ public class Caso_Alarmas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(table);
 
-        btn_borrar.setText("Eliminar");
-        btn_borrar.setEnabled(false);
-        btn_borrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_borrarActionPerformed(evt);
-            }
-        });
-
         comboHoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "hour" }));
 
         comboMinutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "min" }));
@@ -145,10 +136,8 @@ public class Caso_Alarmas extends javax.swing.JFrame {
                         .addComponent(comboMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(comboSegundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_agregar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn_borrar, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(btn_agregar)
                 .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
@@ -164,7 +153,6 @@ public class Caso_Alarmas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_hora)
-                    .addComponent(btn_borrar)
                     .addComponent(comboHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboSegundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -192,24 +180,8 @@ public class Caso_Alarmas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_agregarActionPerformed
 
-    private void btn_borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_borrarActionPerformed
-        int row = table.getSelectedRow();
-        int idEliminar = Integer.parseInt( table.getValueAt(row, 0).toString() );
-       
-        boolean eliminado = acciones.eliminarAlarma( idEliminar );
-        if( eliminado == true ) {
-            this.limpiarTabla();
-            this.consultarAlarmas();
-            
-            btn_borrar.setEnabled( false );
-        }
-        else {
-            JOptionPane.showMessageDialog(null, "ERROR - La alarma no se pudo eliminar");
-        }
-    }//GEN-LAST:event_btn_borrarActionPerformed
-
     private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
-        btn_borrar.setEnabled( true );
+        
     }//GEN-LAST:event_tableMouseClicked
 
     public static void main(String args[]) {
@@ -253,7 +225,6 @@ public class Caso_Alarmas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_agregar;
-    private javax.swing.JButton btn_borrar;
     private javax.swing.JComboBox<String> comboHoras;
     private javax.swing.JComboBox<String> comboMinutos;
     private javax.swing.JComboBox<String> comboSegundos;

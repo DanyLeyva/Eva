@@ -46,11 +46,8 @@
                       <Component id="comboSegundos" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btn_agregar" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_borrar" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <EmptySpace pref="8" max="32767" attributes="0"/>
+              <Component id="btn_agregar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -69,7 +66,6 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lbl_hora" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_borrar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="comboHoras" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="comboMinutos" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="comboSegundos" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -152,15 +148,6 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btn_borrar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Eliminar"/>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_borrarActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JComboBox" name="comboHoras">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
