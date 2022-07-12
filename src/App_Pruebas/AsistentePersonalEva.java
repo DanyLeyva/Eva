@@ -526,7 +526,9 @@ public class AsistentePersonalEva {
                             }
                         }
                     }
-                } else if (actividades.equals("BUSCAR")) {
+                } 
+                // CASO Buscar 0_*
+                else if (actividades.equals("BUSCAR")) {
                     do {
                         System.out.println("\n1: Dime el nombre y cumpleaños de tus familiares o amigos mas cercanos");
                         System.out.println("2: Que es lo que mas te gusta hacer en tu dia  'ordenamos tus pasatiempos alfabeticamente'");

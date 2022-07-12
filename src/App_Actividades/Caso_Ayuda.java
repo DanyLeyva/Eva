@@ -5,16 +5,17 @@ package App_Actividades;
 
 import App_Actividades_Clases.AccionesAyuda;
 import java.util.Vector;
-import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JSeparator;
 
 /**
  * @author Mendoza Castañeda José Ricardo
  */
 
 public class Caso_Ayuda extends javax.swing.JFrame {
+    
     private AccionesAyuda acciones = new AccionesAyuda();
-    private int id = 2, i;
+    private int id = 1, i;
     public Caso_Ayuda() {
         initComponents();
         this.mostrarContactos();
@@ -27,6 +28,7 @@ public class Caso_Ayuda extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         panelPrincipal = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -34,8 +36,10 @@ public class Caso_Ayuda extends javax.swing.JFrame {
         jLabel1.setText("Numeros de Ayuda");
 
         jLabel2.setText("Puedes llamar a estos contactos:");
+        jLabel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        panelPrincipal.setLayout(new java.awt.GridLayout(0, 2));
+        panelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panelPrincipal.setLayout(new java.awt.GridLayout(0, 2, 4, 0));
         jScrollPane1.setViewportView(panelPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -49,8 +53,12 @@ public class Caso_Ayuda extends javax.swing.JFrame {
             .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jSeparator1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -59,8 +67,11 @@ public class Caso_Ayuda extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                .addGap(1, 1, 1)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -71,16 +82,23 @@ public class Caso_Ayuda extends javax.swing.JFrame {
         Vector<Object[]> telefonos = acciones.getNumeros( id );
         
         for( i = 0; i < telefonos.size(); i++ ) {
+            
             Object[] telefono = telefonos.elementAt( i );
             
             String mensajeInfo = telefono[2] + ". - " + telefono[1] + ": ";
             JLabel labelInfo = new JLabel( mensajeInfo ); 
             
             String mensajeNum = telefono[3] + "";
-            JLabel labelNum = new JLabel( mensajeNum ); 
+            JLabel labelNum = new JLabel( mensajeNum );       
             
             panelPrincipal.add( labelInfo );
             panelPrincipal.add( labelNum );   
+            
+            JSeparator separador1 = new JSeparator();
+            JSeparator separador2 = new JSeparator();
+            
+            panelPrincipal.add( separador1 );
+            panelPrincipal.add( separador2 );
         }
         
    
@@ -122,6 +140,7 @@ public class Caso_Ayuda extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
 }
