@@ -10,11 +10,14 @@ import java.util.Vector;
 
 public class PanelFamiliares extends javax.swing.JPanel {
     private AccionesFamiliares metodos = new AccionesFamiliares();
-    private int id = 1;
+    private int id;
 
-    public PanelFamiliares() {
+    public PanelFamiliares( int id ) {
         initComponents();
+        this.id = id;
+        
         this.mostrarFamiliares();
+        
     }
     public void mostrarFamiliares() {
         Vector<Object[]> familiares = metodos.getFamiliares( id );

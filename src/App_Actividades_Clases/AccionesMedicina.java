@@ -38,12 +38,12 @@ public class AccionesMedicina {
             Vector<Object[]> medicinas = new Vector(10, 1);
 
             while (res.next()) {
-                Object[] familiar = new Object[2];
+                Object[] medicina = new Object[2];
 
-                familiar[0] = res.getString("nombre");
-                familiar[1] = res.getLong("alarma_medicinas");
+                medicina[0] = res.getString("nombre");
+                medicina[1] = res.getLong("alarma_medicinas");
 
-                medicinas.addElement( familiar );
+                medicinas.addElement( medicina );
             }
 
             return medicinas;

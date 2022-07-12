@@ -6,18 +6,19 @@ import java.util.Vector;
 
 /**
  * @author Mendoza Castañeda José Ricardo
- * Medicina recibe nombre y hora
  */
 public class PanelMedicinas extends javax.swing.JPanel {
     private AccionesMedicina metodos = new AccionesMedicina();
-    private int id = 2;
+    private int id;
     
-    public PanelMedicinas() {
+    public PanelMedicinas( int id ) {
         initComponents();
-        this.mostrarFamiliares();
+        this.id = id;
+        this.mostrarMedicinas();
+        
     }
-    public void mostrarFamiliares() {
-        Vector<Object[]> medicinas = metodos.getMedicinas(id );
+    public void mostrarMedicinas() {
+        Vector<Object[]> medicinas = metodos.getMedicinas( id );
         int posY = 0;
         
         panelInfo.removeAll();

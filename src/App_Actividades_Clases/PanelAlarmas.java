@@ -15,9 +15,10 @@ public class PanelAlarmas extends javax.swing.JPanel {
     private int id = 1;
     private DefaultTableModel model;
 
-    public PanelAlarmas() {
+    public PanelAlarmas( int id ) {
         initComponents();
         model = (DefaultTableModel) table.getModel();
+        this.id = id;
         
         this.limpiarTabla();
         this.consultarAlarmas();
