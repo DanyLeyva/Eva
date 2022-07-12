@@ -28,7 +28,7 @@ public class Caso_uno {
     try{
     Class.forName("com.mysql.jdbc.Driver");
     cn = DriverManager.getConnection("jdbc:mysql://localhost/eva_prototipo","root","");
-        System.out.println("Se hizo la conexixon exitosa");
+       System.out.println("Se hizo la conexixon exitosa");
     
     }catch(Exception e){System.out.println(e.getMessage());}
     return cn;

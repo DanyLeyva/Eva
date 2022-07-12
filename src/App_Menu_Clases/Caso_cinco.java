@@ -18,7 +18,7 @@ public class Caso_cinco {
      public static int Usuarios = 1;
      public static String[] Pasatiempos = new String [300];
      
-     Connection cn;
+    Connection cn;
     Statement st;
     
     public Connection conexion(){

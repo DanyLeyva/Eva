@@ -16,9 +16,9 @@ import java.sql.Statement;
 public class Caso_seis {
     
     public static int Usuarios = 1;
-     public static String[] Pasatiempos = new String [300];
+    public static String[] Pasatiempos = new String [300];
      
-     Connection cn;
+    Connection cn;
     Statement st;
     
     public Connection conexion(){
