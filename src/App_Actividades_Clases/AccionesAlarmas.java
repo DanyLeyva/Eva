@@ -7,7 +7,6 @@ import app_connection.ConexionDB;
 import com.mysql.jdbc.ResultSetImpl;
 import com.mysql.jdbc.Statement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
@@ -43,6 +42,7 @@ public class AccionesAlarmas {
         }
     }
     public Vector<Object[]> getAlarmas( int id ) {
+        // Cambiado
         try {
             String query = "select id_alarmas_extra, alarmas_extra, nombre from alarmas where FK_usuario=" + id + ";";
             res = (ResultSetImpl) st.executeQuery(query);
@@ -50,7 +50,7 @@ public class AccionesAlarmas {
             Vector<Object[]> alarmas = new Vector(10, 1);
             while( res.next() ) {
                 Object[] alarma = new Object[3];
-   
+           
                 alarma[0] = res.getInt("id_alarmas_extra");                
                 alarma[1] = res.getLong("alarmas_extra");
                 alarma[2] = res.getString("nombre");
@@ -79,7 +79,7 @@ public class AccionesAlarmas {
             return false;
         }
     }
-    public boolean eliminarAlarma( int id ) {
+    public boolean eliminar( int id ) {
         try {
             String query = "delete from alarmas where id_alarmas_extra = " + id + ";";
             st.executeUpdate( query );

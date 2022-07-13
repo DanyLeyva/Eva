@@ -27,7 +27,7 @@ public class PanelPasatiempos extends javax.swing.JPanel {
         
         for( int i = 0; i < hobbies.size(); i++ ) {
             Object[] hobbie = hobbies.elementAt( i );
-            Medicina panel = new Medicina( hobbie[0].toString(), hobbie[1].toString() );
+            Pasatiempo panel = new Pasatiempo( hobbie[0].toString(), hobbie[1].toString() );
             panel.setSize(520, 70);
             panel.setLocation( 0, posY);
             

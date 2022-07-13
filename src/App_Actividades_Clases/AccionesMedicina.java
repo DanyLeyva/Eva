@@ -55,6 +55,18 @@ public class AccionesMedicina {
             return null;
         }
     }    
+    public boolean eliminar( int id ) {
+        try {
+            String query = "delete from caso_seis where id_medicinas = " + id + ";";
+            st.executeUpdate( query );
+            return true;
+        } catch (SQLException ex) {
+            System.out.println(" - No se pudo eliminar la alarma");
+            System.out.println( ex );
+            this.cerrarConexion();
+            return false;
+        } 
+    }
     public final void cerrarConexion() {
         try
         {

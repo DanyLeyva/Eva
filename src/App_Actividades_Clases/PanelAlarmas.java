@@ -28,6 +28,7 @@ public class PanelAlarmas extends javax.swing.JPanel {
     }
     public void consultarAlarmas() {
         Vector<Object[]> alarmas = acciones.getAlarmas( id );
+        System.out.println( alarmas );
         for (int i = 0; i < alarmas.size(); i++)
         {
             Object[] alarm = alarmas.elementAt(i);

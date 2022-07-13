@@ -22,6 +22,8 @@ public class Caso_Buscar extends javax.swing.JFrame {
 
     public Caso_Buscar() {
         initComponents();
+        
+        lblTitle.setText(" Buscar Información de ID: " + id);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
