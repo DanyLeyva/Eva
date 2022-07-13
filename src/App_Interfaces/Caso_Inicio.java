@@ -5,6 +5,18 @@
  */
 package App_Interfaces;
 
+import app_connection.Conexion_Base;
+import javax.swing.JOptionPane;
+import com.mysql.jdbc.Connection;
+import java.awt.Color;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan Pablo
@@ -14,9 +26,12 @@ public class Caso_Inicio extends javax.swing.JFrame {
     /**
      * Creates new form Caso_Inicio
      */
+    
+    int xMouse, yMouse;
     public Caso_Inicio() {
         initComponents();
         setLocationRelativeTo(null);
+        cerrar();
     }
 
     /**
@@ -29,64 +44,122 @@ public class Caso_Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel_Icono = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel_Idioma = new javax.swing.JLabel();
         jTextField_Usuario = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel_Usuario = new javax.swing.JLabel();
+        jLabel_Sexo = new javax.swing.JLabel();
+        jButton_Continuar = new javax.swing.JButton();
         jComboBox_Sexos = new javax.swing.JComboBox<>();
         jComboBox_Idiomas = new javax.swing.JComboBox<>();
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel_Header = new javax.swing.JPanel();
+        jLabel_Salir = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App_Diseños/Titulo_Inicio.jpg"))); // NOI18N
-        jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 230, 60));
-
-        jLabel_Icono.setBackground(new java.awt.Color(51, 51, 255));
-        jLabel_Icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App_Diseños/EVA.png"))); // NOI18N
-        jLabel_Icono.setOpaque(true);
-        jPanel1.add(jLabel_Icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 300, 500));
-
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Idioma");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        jLabel_Idioma.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel_Idioma.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Idioma.setText("Idioma");
+        jPanel1.add(jLabel_Idioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
 
         jTextField_Usuario.setBackground(new java.awt.Color(255, 255, 255));
         jTextField_Usuario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jTextField_Usuario.setForeground(new java.awt.Color(204, 204, 204));
         jTextField_Usuario.setText("Ingrese su nombre");
         jTextField_Usuario.setBorder(null);
+        jTextField_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTextField_UsuarioMousePressed(evt);
+            }
+        });
         jTextField_Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_UsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 390, -1));
+        jPanel1.add(jTextField_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 420, -1));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Usuario");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jLabel_Usuario.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel_Usuario.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Usuario.setText("Usuario");
+        jPanel1.add(jLabel_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Sexo");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        jLabel_Sexo.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel_Sexo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_Sexo.setText("Sexo");
+        jPanel1.add(jLabel_Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
+        jButton_Continuar.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_Continuar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton_Continuar.setText("Continuar");
+        jButton_Continuar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_Continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ContinuarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_Continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+
+        jComboBox_Sexos.setBackground(new java.awt.Color(153, 153, 255));
         jComboBox_Sexos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jComboBox_Sexos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mujer", "Hombre", "Prefiero no decirlo" }));
-        jPanel1.add(jComboBox_Sexos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
+        jComboBox_Sexos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jComboBox_Sexos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, -1, -1));
 
+        jComboBox_Idiomas.setBackground(new java.awt.Color(153, 153, 255));
         jComboBox_Idiomas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jComboBox_Idiomas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "Inglés" }));
-        jPanel1.add(jComboBox_Idiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 170, -1));
+        jComboBox_Idiomas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox_Idiomas.setMinimumSize(new java.awt.Dimension(100, 32));
+        jComboBox_Idiomas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_IdiomasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox_Idiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 180, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 420, -1));
+
+        jPanel_Header.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel_Header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel_HeaderMouseDragged(evt);
+            }
+        });
+        jPanel_Header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel_HeaderMousePressed(evt);
+            }
+        });
+        jPanel_Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_Salir.setBackground(java.awt.Color.blue);
+        jLabel_Salir.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel_Salir.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Salir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_Salir.setText("X");
+        jLabel_Salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel_Salir.setOpaque(true);
+        jLabel_Salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_SalirMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel_SalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel_SalirMouseExited(evt);
+            }
+        });
+        jPanel_Header.add(jLabel_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 40, -1));
+
+        jPanel1.add(jPanel_Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,16 +169,143 @@ public class Caso_Inicio extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+     //<editor-fold defaultstate="collapsed" desc="Confirmar cierre de programa">
+  
+    public void cerrar() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    confirmarSalida();
+
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void confirmarSalida(){
+        
+    int valor = JOptionPane.showConfirmDialog(this, "¿Estás segur@ de cerrar el programa?","Advertencia",JOptionPane.YES_NO_OPTION);
+    
+    if(valor==JOptionPane.YES_OPTION){
+        JOptionPane.showMessageDialog(null, "Gracias por utilizar el programa :)","Gracias",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
+    }
+}// </editor-fold>
+    
+    private void jComboBox_IdiomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_IdiomasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox_IdiomasActionPerformed
+
+    private void jButton_ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ContinuarActionPerformed
+        // Boton Continuar
+        String nombre, sexo, idioma;
+        nombre = jTextField_Usuario.getText();
+        sexo = jComboBox_Sexos.getSelectedItem().toString();
+        idioma = jComboBox_Idiomas.getSelectedItem().toString();
+        BD();
+        //JOptionPane.showMessageDialog(null, sexo + nombre + idioma);
+        dispose();
+        if (idioma.equals("Español")) {
+            switch (sexo) {
+                case "Hombre":
+                JOptionPane.showMessageDialog(null, "Bienvenido " + nombre + " mi nombre es Eva y será un placer ser tu asistente");
+                break;
+                case "Mujer":
+                JOptionPane.showMessageDialog(null, "Bienvenida " + nombre + " mi nombre es Eva y será un placer ser tu asistente");
+                break;
+                case "Prefiero no decirlo":
+                JOptionPane.showMessageDialog(null, "Bienvenid@ " + nombre + " mi nombre es Eva y será un placer ser tu asistente");
+                break;
+                default:
+                break;
+            }
+        }
+        if (idioma.equals("Inglés")) {
+            JOptionPane.showMessageDialog(null, "You're welcome " + nombre + " my name is Eva and it will be a pleasure to be your assistant");
+        }
+
+        JOptionPane.showMessageDialog(null, "¿Deseas configurar el dispositivo antes de continuar?");
+        JOptionPane.showMessageDialog(null, "No es obligatorio pero Eva te lo recomienda");
+
+        new Caso_InicioDecision().setVisible(true);
+    }//GEN-LAST:event_jButton_ContinuarActionPerformed
+
+    
     private void jTextField_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_UsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_UsuarioActionPerformed
 
+    private void jTextField_UsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_UsuarioMousePressed
+        // TODO add your handling code here:
+        jTextField_Usuario.setText("");
+        jTextField_Usuario.setForeground(Color.black);
+    }//GEN-LAST:event_jTextField_UsuarioMousePressed
+
+    private void jLabel_SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SalirMouseClicked
+        // accion salir
+
+        System.exit(0);
+    }//GEN-LAST:event_jLabel_SalirMouseClicked
+
+    private void jLabel_SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SalirMouseEntered
+        // Colorear cuando pasa encima el cursor
+        jLabel_Salir.setBackground(Color.red);
+        jLabel_Salir.setForeground(Color.black);
+    }//GEN-LAST:event_jLabel_SalirMouseEntered
+
+    private void jLabel_SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SalirMouseExited
+        // colorear cuando sale el cursor
+        jLabel_Salir.setBackground(Color.BLUE);
+        jLabel_Salir.setForeground(Color.white);
+    }//GEN-LAST:event_jLabel_SalirMouseExited
+
+    private void jPanel_HeaderMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_HeaderMouseDragged
+        // Evento mouse arrastrado
+
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+
+        this.setLocation(x-xMouse, y-yMouse);
+
+    }//GEN-LAST:event_jPanel_HeaderMouseDragged
+
+    private void jPanel_HeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_HeaderMousePressed
+        // Almacenar posicion
+        xMouse= evt.getX();
+        yMouse= evt.getY();
+
+    }//GEN-LAST:event_jPanel_HeaderMousePressed
+
+    
+    Conexion_Base con = new Conexion_Base();
+    Connection cn = (Connection) con.conexion();
+    
+     public void BD(){
+        try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_Usuario.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO usuario(nombre,sexo,idioma) VALUES(?,?,?)");
+             pps.setString(1, jTextField_Usuario.getText());
+             pps.setString(2, (String) jComboBox_Sexos.getSelectedItem());
+             pps.setString(3, (String) jComboBox_Idiomas.getSelectedItem());
+             pps.executeUpdate();
+              }
+             }
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Inicio.class.getName()).log(Level.SEVERE, null,ex);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -142,14 +342,16 @@ public class Caso_Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_Continuar;
     private javax.swing.JComboBox<String> jComboBox_Idiomas;
     private javax.swing.JComboBox<String> jComboBox_Sexos;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel_Icono;
+    private javax.swing.JLabel jLabel_Idioma;
+    private javax.swing.JLabel jLabel_Salir;
+    private javax.swing.JLabel jLabel_Sexo;
+    private javax.swing.JLabel jLabel_Usuario;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel_Header;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField_Usuario;
     // End of variables declaration//GEN-END:variables
 }

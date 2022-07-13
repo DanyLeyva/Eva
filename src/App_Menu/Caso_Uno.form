@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -23,502 +24,654 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="190" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="JLabel_Titulo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="226" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel_AvisoPersonas" min="-2" pref="504" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jLabel_Pesona1" min="-2" pref="68" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="390" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel_BrthdayFormato" min="-2" pref="238" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="jLabel_BirthdayPesona2" max="32767" attributes="0"/>
-                  <Component id="jLabel_BirthdayPesona1" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jLabel_KinshipPesona1" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jLabel_NamePesona1" alignment="1" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jComboBox_Year" min="-2" pref="128" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jButton_Save" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton_Borrar" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="jTextField_NamePersona1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jTextField_KinshipPersona1" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jComboBox_Hour" pref="128" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jComboBox_Mes" min="-2" pref="138" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jComboBox_Dia" min="-2" pref="138" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jComboBox_Min" min="-2" pref="138" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jComboBox_Seg" min="-2" pref="138" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel_Fondo" min="-2" pref="470" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Component id="JLabel_Titulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel_AvisoPersonas" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-              <Component id="jLabel_Pesona1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField_NamePersona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_NamePesona1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField_KinshipPersona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_KinshipPesona1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel_BirthdayPesona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox_Year" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox_Mes" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox_Dia" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel_BirthdayPesona2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox_Hour" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox_Min" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox_Seg" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="80" max="32767" attributes="0"/>
-              <Component id="jLabel_BrthdayFormato" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton_Save" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton_Borrar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel_Fondo" min="-2" pref="420" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="JLabel_Titulo">
+    <Container class="javax.swing.JPanel" name="jPanel_Fondo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Dime el nombre y cumplea&#xf1;os de tus familiares o amigos mas cercanos"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Pesona1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Persona 1"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_NamePesona1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parentesco"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="cumplea&#xf1;os"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_NamePersona1">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_KinshipPersona1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_BrthdayFormato">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Formato del cumplea&#xf1;os: YYYY / MM / DD"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_AvisoPersonas">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Recuerda que en cualquier momento puedes agregar mas conocidos desde el menu!!!"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton_Save">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Guadar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_SaveActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Hora a recordar"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_Hour">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="25">
-            <StringItem index="0" value="Hour"/>
-            <StringItem index="1" value="01"/>
-            <StringItem index="2" value="02"/>
-            <StringItem index="3" value="03"/>
-            <StringItem index="4" value="04"/>
-            <StringItem index="5" value="05"/>
-            <StringItem index="6" value="06"/>
-            <StringItem index="7" value="07"/>
-            <StringItem index="8" value="08"/>
-            <StringItem index="9" value="09"/>
-            <StringItem index="10" value="10"/>
-            <StringItem index="11" value="11"/>
-            <StringItem index="12" value="12"/>
-            <StringItem index="13" value="13"/>
-            <StringItem index="14" value="14"/>
-            <StringItem index="15" value="15"/>
-            <StringItem index="16" value="16"/>
-            <StringItem index="17" value="17"/>
-            <StringItem index="18" value="18"/>
-            <StringItem index="19" value="19"/>
-            <StringItem index="20" value="20"/>
-            <StringItem index="21" value="21"/>
-            <StringItem index="22" value="22"/>
-            <StringItem index="23" value="23"/>
-            <StringItem index="24" value="24"/>
-          </StringArray>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_Min">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="61">
-            <StringItem index="0" value="Min"/>
-            <StringItem index="1" value="00"/>
-            <StringItem index="2" value="01"/>
-            <StringItem index="3" value="02"/>
-            <StringItem index="4" value="03"/>
-            <StringItem index="5" value="04"/>
-            <StringItem index="6" value="05"/>
-            <StringItem index="7" value="06"/>
-            <StringItem index="8" value="07"/>
-            <StringItem index="9" value="08"/>
-            <StringItem index="10" value="09"/>
-            <StringItem index="11" value="10"/>
-            <StringItem index="12" value="11"/>
-            <StringItem index="13" value="12"/>
-            <StringItem index="14" value="13"/>
-            <StringItem index="15" value="14"/>
-            <StringItem index="16" value="15"/>
-            <StringItem index="17" value="16"/>
-            <StringItem index="18" value="17"/>
-            <StringItem index="19" value="18"/>
-            <StringItem index="20" value="19"/>
-            <StringItem index="21" value="20"/>
-            <StringItem index="22" value="21"/>
-            <StringItem index="23" value="22"/>
-            <StringItem index="24" value="23"/>
-            <StringItem index="25" value="24"/>
-            <StringItem index="26" value="25"/>
-            <StringItem index="27" value="26"/>
-            <StringItem index="28" value="27"/>
-            <StringItem index="29" value="28"/>
-            <StringItem index="30" value="29"/>
-            <StringItem index="31" value="30"/>
-            <StringItem index="32" value="31"/>
-            <StringItem index="33" value="32"/>
-            <StringItem index="34" value="33"/>
-            <StringItem index="35" value="34"/>
-            <StringItem index="36" value="35"/>
-            <StringItem index="37" value="36"/>
-            <StringItem index="38" value="37"/>
-            <StringItem index="39" value="38"/>
-            <StringItem index="40" value="39"/>
-            <StringItem index="41" value="40"/>
-            <StringItem index="42" value="41"/>
-            <StringItem index="43" value="42"/>
-            <StringItem index="44" value="43"/>
-            <StringItem index="45" value="44"/>
-            <StringItem index="46" value="45"/>
-            <StringItem index="47" value="46"/>
-            <StringItem index="48" value="47"/>
-            <StringItem index="49" value="48"/>
-            <StringItem index="50" value="49"/>
-            <StringItem index="51" value="50"/>
-            <StringItem index="52" value="51"/>
-            <StringItem index="53" value="52"/>
-            <StringItem index="54" value="53"/>
-            <StringItem index="55" value="54"/>
-            <StringItem index="56" value="55"/>
-            <StringItem index="57" value="56"/>
-            <StringItem index="58" value="57"/>
-            <StringItem index="59" value="58"/>
-            <StringItem index="60" value="59"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_Seg">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="61">
-            <StringItem index="0" value="Seg"/>
-            <StringItem index="1" value="00"/>
-            <StringItem index="2" value="01"/>
-            <StringItem index="3" value="02"/>
-            <StringItem index="4" value="03"/>
-            <StringItem index="5" value="04"/>
-            <StringItem index="6" value="05"/>
-            <StringItem index="7" value="06"/>
-            <StringItem index="8" value="07"/>
-            <StringItem index="9" value="08"/>
-            <StringItem index="10" value="09"/>
-            <StringItem index="11" value="10"/>
-            <StringItem index="12" value="11"/>
-            <StringItem index="13" value="12"/>
-            <StringItem index="14" value="13"/>
-            <StringItem index="15" value="14"/>
-            <StringItem index="16" value="15"/>
-            <StringItem index="17" value="16"/>
-            <StringItem index="18" value="17"/>
-            <StringItem index="19" value="18"/>
-            <StringItem index="20" value="19"/>
-            <StringItem index="21" value="20"/>
-            <StringItem index="22" value="21"/>
-            <StringItem index="23" value="22"/>
-            <StringItem index="24" value="23"/>
-            <StringItem index="25" value="24"/>
-            <StringItem index="26" value="25"/>
-            <StringItem index="27" value="26"/>
-            <StringItem index="28" value="27"/>
-            <StringItem index="29" value="28"/>
-            <StringItem index="30" value="29"/>
-            <StringItem index="31" value="30"/>
-            <StringItem index="32" value="31"/>
-            <StringItem index="33" value="32"/>
-            <StringItem index="34" value="33"/>
-            <StringItem index="35" value="34"/>
-            <StringItem index="36" value="35"/>
-            <StringItem index="37" value="36"/>
-            <StringItem index="38" value="37"/>
-            <StringItem index="39" value="38"/>
-            <StringItem index="40" value="39"/>
-            <StringItem index="41" value="40"/>
-            <StringItem index="42" value="41"/>
-            <StringItem index="43" value="42"/>
-            <StringItem index="44" value="43"/>
-            <StringItem index="45" value="44"/>
-            <StringItem index="46" value="45"/>
-            <StringItem index="47" value="46"/>
-            <StringItem index="48" value="47"/>
-            <StringItem index="49" value="48"/>
-            <StringItem index="50" value="49"/>
-            <StringItem index="51" value="50"/>
-            <StringItem index="52" value="51"/>
-            <StringItem index="53" value="52"/>
-            <StringItem index="54" value="53"/>
-            <StringItem index="55" value="54"/>
-            <StringItem index="56" value="55"/>
-            <StringItem index="57" value="56"/>
-            <StringItem index="58" value="57"/>
-            <StringItem index="59" value="58"/>
-            <StringItem index="60" value="59"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_Year">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="63">
-            <StringItem index="0" value="A&#xf1;o"/>
-            <StringItem index="1" value="1950"/>
-            <StringItem index="2" value="1951"/>
-            <StringItem index="3" value="1952"/>
-            <StringItem index="4" value="1953"/>
-            <StringItem index="5" value="1954"/>
-            <StringItem index="6" value="1955"/>
-            <StringItem index="7" value="1956"/>
-            <StringItem index="8" value="1957"/>
-            <StringItem index="9" value="1958"/>
-            <StringItem index="10" value="1959"/>
-            <StringItem index="11" value="1960"/>
-            <StringItem index="12" value="1961"/>
-            <StringItem index="13" value="1962"/>
-            <StringItem index="14" value="1963"/>
-            <StringItem index="15" value="1964"/>
-            <StringItem index="16" value="1965"/>
-            <StringItem index="17" value="1966"/>
-            <StringItem index="18" value="1967"/>
-            <StringItem index="19" value="1968"/>
-            <StringItem index="20" value="1969"/>
-            <StringItem index="21" value="1970"/>
-            <StringItem index="22" value="1971"/>
-            <StringItem index="23" value="1972"/>
-            <StringItem index="24" value="1973"/>
-            <StringItem index="25" value="1974"/>
-            <StringItem index="26" value="1975"/>
-            <StringItem index="27" value="1976"/>
-            <StringItem index="28" value="1977"/>
-            <StringItem index="29" value="1978"/>
-            <StringItem index="30" value="1979"/>
-            <StringItem index="31" value="1980"/>
-            <StringItem index="32" value="1981"/>
-            <StringItem index="33" value="1982"/>
-            <StringItem index="34" value="1983"/>
-            <StringItem index="35" value="1984"/>
-            <StringItem index="36" value="1985"/>
-            <StringItem index="37" value="1986"/>
-            <StringItem index="38" value="1987"/>
-            <StringItem index="39" value="1988"/>
-            <StringItem index="40" value="1989"/>
-            <StringItem index="41" value="1990"/>
-            <StringItem index="42" value="1991"/>
-            <StringItem index="43" value="1992"/>
-            <StringItem index="44" value="1993"/>
-            <StringItem index="45" value="1994"/>
-            <StringItem index="46" value="1995"/>
-            <StringItem index="47" value="1996"/>
-            <StringItem index="48" value="1997"/>
-            <StringItem index="49" value="1998"/>
-            <StringItem index="50" value="1999"/>
-            <StringItem index="51" value="2000"/>
-            <StringItem index="52" value="2001"/>
-            <StringItem index="53" value="2002"/>
-            <StringItem index="54" value="2003"/>
-            <StringItem index="55" value="2004"/>
-            <StringItem index="56" value="2005"/>
-            <StringItem index="57" value="2006"/>
-            <StringItem index="58" value="2007"/>
-            <StringItem index="59" value="2008"/>
-            <StringItem index="60" value="2009"/>
-            <StringItem index="61" value="2010"/>
-            <StringItem index="62" value=" "/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_Mes">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="14">
-            <StringItem index="0" value="Mes"/>
-            <StringItem index="1" value="00"/>
-            <StringItem index="2" value="01"/>
-            <StringItem index="3" value="02"/>
-            <StringItem index="4" value="03"/>
-            <StringItem index="5" value="04"/>
-            <StringItem index="6" value="05"/>
-            <StringItem index="7" value="06"/>
-            <StringItem index="8" value="07"/>
-            <StringItem index="9" value="08"/>
-            <StringItem index="10" value="09"/>
-            <StringItem index="11" value="10"/>
-            <StringItem index="12" value="11"/>
-            <StringItem index="13" value="12"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox_Dia">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="33">
-            <StringItem index="0" value="Dia"/>
-            <StringItem index="1" value="00"/>
-            <StringItem index="2" value="01"/>
-            <StringItem index="3" value="02"/>
-            <StringItem index="4" value="03"/>
-            <StringItem index="5" value="04"/>
-            <StringItem index="6" value="05"/>
-            <StringItem index="7" value="06"/>
-            <StringItem index="8" value="07"/>
-            <StringItem index="9" value="08"/>
-            <StringItem index="10" value="09"/>
-            <StringItem index="11" value="10"/>
-            <StringItem index="12" value="11"/>
-            <StringItem index="13" value="12"/>
-            <StringItem index="14" value="13"/>
-            <StringItem index="15" value="14"/>
-            <StringItem index="16" value="15"/>
-            <StringItem index="17" value="16"/>
-            <StringItem index="18" value="17"/>
-            <StringItem index="19" value="18"/>
-            <StringItem index="20" value="19"/>
-            <StringItem index="21" value="20"/>
-            <StringItem index="22" value="21"/>
-            <StringItem index="23" value="22"/>
-            <StringItem index="24" value="23"/>
-            <StringItem index="25" value="24"/>
-            <StringItem index="26" value="25"/>
-            <StringItem index="27" value="26"/>
-            <StringItem index="28" value="27"/>
-            <StringItem index="29" value="28"/>
-            <StringItem index="30" value="29"/>
-            <StringItem index="31" value="30"/>
-            <StringItem index="32" value="31"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton_Borrar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Borrar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_BorrarActionPerformed"/>
-      </Events>
-    </Component>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="JLabel_Titulo">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="DialogInput" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="importantes para ti!!!"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="40" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_NamePesona1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="20" y="100" width="-1" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_KinshipPesona1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Parentesco:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="20" y="150" width="-1" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cumplea&#xf1;os:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="20" y="220" width="-1" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="150" y="120" width="310" height="10"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="150" y="170" width="310" height="10"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_NamePersona1">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Caso_Uno_jTextField_NamePersona1"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="150" y="100" width="310" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField_KinshipPersona1">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="150" y="150" width="310" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton_Save">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Guadar"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_SaveActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="50" y="370" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_BirthdayPesona2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Hora a recordar:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="20" y="300" width="-1" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_Hour">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="16" style="1"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="25">
+                <StringItem index="0" value="Hour"/>
+                <StringItem index="1" value="01"/>
+                <StringItem index="2" value="02"/>
+                <StringItem index="3" value="03"/>
+                <StringItem index="4" value="04"/>
+                <StringItem index="5" value="05"/>
+                <StringItem index="6" value="06"/>
+                <StringItem index="7" value="07"/>
+                <StringItem index="8" value="08"/>
+                <StringItem index="9" value="09"/>
+                <StringItem index="10" value="10"/>
+                <StringItem index="11" value="11"/>
+                <StringItem index="12" value="12"/>
+                <StringItem index="13" value="13"/>
+                <StringItem index="14" value="14"/>
+                <StringItem index="15" value="15"/>
+                <StringItem index="16" value="16"/>
+                <StringItem index="17" value="17"/>
+                <StringItem index="18" value="18"/>
+                <StringItem index="19" value="19"/>
+                <StringItem index="20" value="20"/>
+                <StringItem index="21" value="21"/>
+                <StringItem index="22" value="22"/>
+                <StringItem index="23" value="23"/>
+                <StringItem index="24" value="00"/>
+              </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_HourActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="170" y="300" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_Min">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="16" style="1"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="61">
+                <StringItem index="0" value="Min"/>
+                <StringItem index="1" value="00"/>
+                <StringItem index="2" value="01"/>
+                <StringItem index="3" value="02"/>
+                <StringItem index="4" value="03"/>
+                <StringItem index="5" value="04"/>
+                <StringItem index="6" value="05"/>
+                <StringItem index="7" value="06"/>
+                <StringItem index="8" value="07"/>
+                <StringItem index="9" value="08"/>
+                <StringItem index="10" value="09"/>
+                <StringItem index="11" value="10"/>
+                <StringItem index="12" value="11"/>
+                <StringItem index="13" value="12"/>
+                <StringItem index="14" value="13"/>
+                <StringItem index="15" value="14"/>
+                <StringItem index="16" value="15"/>
+                <StringItem index="17" value="16"/>
+                <StringItem index="18" value="17"/>
+                <StringItem index="19" value="18"/>
+                <StringItem index="20" value="19"/>
+                <StringItem index="21" value="20"/>
+                <StringItem index="22" value="21"/>
+                <StringItem index="23" value="22"/>
+                <StringItem index="24" value="23"/>
+                <StringItem index="25" value="24"/>
+                <StringItem index="26" value="25"/>
+                <StringItem index="27" value="26"/>
+                <StringItem index="28" value="27"/>
+                <StringItem index="29" value="28"/>
+                <StringItem index="30" value="29"/>
+                <StringItem index="31" value="30"/>
+                <StringItem index="32" value="31"/>
+                <StringItem index="33" value="32"/>
+                <StringItem index="34" value="33"/>
+                <StringItem index="35" value="34"/>
+                <StringItem index="36" value="35"/>
+                <StringItem index="37" value="36"/>
+                <StringItem index="38" value="37"/>
+                <StringItem index="39" value="38"/>
+                <StringItem index="40" value="39"/>
+                <StringItem index="41" value="40"/>
+                <StringItem index="42" value="41"/>
+                <StringItem index="43" value="42"/>
+                <StringItem index="44" value="43"/>
+                <StringItem index="45" value="44"/>
+                <StringItem index="46" value="45"/>
+                <StringItem index="47" value="46"/>
+                <StringItem index="48" value="47"/>
+                <StringItem index="49" value="48"/>
+                <StringItem index="50" value="49"/>
+                <StringItem index="51" value="50"/>
+                <StringItem index="52" value="51"/>
+                <StringItem index="53" value="52"/>
+                <StringItem index="54" value="53"/>
+                <StringItem index="55" value="54"/>
+                <StringItem index="56" value="55"/>
+                <StringItem index="57" value="56"/>
+                <StringItem index="58" value="57"/>
+                <StringItem index="59" value="58"/>
+                <StringItem index="60" value="59"/>
+              </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="280" y="300" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_Seg">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="16" style="1"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="61">
+                <StringItem index="0" value="Seg"/>
+                <StringItem index="1" value="00"/>
+                <StringItem index="2" value="01"/>
+                <StringItem index="3" value="02"/>
+                <StringItem index="4" value="03"/>
+                <StringItem index="5" value="04"/>
+                <StringItem index="6" value="05"/>
+                <StringItem index="7" value="06"/>
+                <StringItem index="8" value="07"/>
+                <StringItem index="9" value="08"/>
+                <StringItem index="10" value="09"/>
+                <StringItem index="11" value="10"/>
+                <StringItem index="12" value="11"/>
+                <StringItem index="13" value="12"/>
+                <StringItem index="14" value="13"/>
+                <StringItem index="15" value="14"/>
+                <StringItem index="16" value="15"/>
+                <StringItem index="17" value="16"/>
+                <StringItem index="18" value="17"/>
+                <StringItem index="19" value="18"/>
+                <StringItem index="20" value="19"/>
+                <StringItem index="21" value="20"/>
+                <StringItem index="22" value="21"/>
+                <StringItem index="23" value="22"/>
+                <StringItem index="24" value="23"/>
+                <StringItem index="25" value="24"/>
+                <StringItem index="26" value="25"/>
+                <StringItem index="27" value="26"/>
+                <StringItem index="28" value="27"/>
+                <StringItem index="29" value="28"/>
+                <StringItem index="30" value="29"/>
+                <StringItem index="31" value="30"/>
+                <StringItem index="32" value="31"/>
+                <StringItem index="33" value="32"/>
+                <StringItem index="34" value="33"/>
+                <StringItem index="35" value="34"/>
+                <StringItem index="36" value="35"/>
+                <StringItem index="37" value="36"/>
+                <StringItem index="38" value="37"/>
+                <StringItem index="39" value="38"/>
+                <StringItem index="40" value="39"/>
+                <StringItem index="41" value="40"/>
+                <StringItem index="42" value="41"/>
+                <StringItem index="43" value="42"/>
+                <StringItem index="44" value="43"/>
+                <StringItem index="45" value="44"/>
+                <StringItem index="46" value="45"/>
+                <StringItem index="47" value="46"/>
+                <StringItem index="48" value="47"/>
+                <StringItem index="49" value="48"/>
+                <StringItem index="50" value="49"/>
+                <StringItem index="51" value="50"/>
+                <StringItem index="52" value="51"/>
+                <StringItem index="53" value="52"/>
+                <StringItem index="54" value="53"/>
+                <StringItem index="55" value="54"/>
+                <StringItem index="56" value="55"/>
+                <StringItem index="57" value="56"/>
+                <StringItem index="58" value="57"/>
+                <StringItem index="59" value="58"/>
+                <StringItem index="60" value="59"/>
+              </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="380" y="300" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_Year">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="16" style="1"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="63">
+                <StringItem index="0" value="A&#xf1;o"/>
+                <StringItem index="1" value="1950"/>
+                <StringItem index="2" value="1951"/>
+                <StringItem index="3" value="1952"/>
+                <StringItem index="4" value="1953"/>
+                <StringItem index="5" value="1954"/>
+                <StringItem index="6" value="1955"/>
+                <StringItem index="7" value="1956"/>
+                <StringItem index="8" value="1957"/>
+                <StringItem index="9" value="1958"/>
+                <StringItem index="10" value="1959"/>
+                <StringItem index="11" value="1960"/>
+                <StringItem index="12" value="1961"/>
+                <StringItem index="13" value="1962"/>
+                <StringItem index="14" value="1963"/>
+                <StringItem index="15" value="1964"/>
+                <StringItem index="16" value="1965"/>
+                <StringItem index="17" value="1966"/>
+                <StringItem index="18" value="1967"/>
+                <StringItem index="19" value="1968"/>
+                <StringItem index="20" value="1969"/>
+                <StringItem index="21" value="1970"/>
+                <StringItem index="22" value="1971"/>
+                <StringItem index="23" value="1972"/>
+                <StringItem index="24" value="1973"/>
+                <StringItem index="25" value="1974"/>
+                <StringItem index="26" value="1975"/>
+                <StringItem index="27" value="1976"/>
+                <StringItem index="28" value="1977"/>
+                <StringItem index="29" value="1978"/>
+                <StringItem index="30" value="1979"/>
+                <StringItem index="31" value="1980"/>
+                <StringItem index="32" value="1981"/>
+                <StringItem index="33" value="1982"/>
+                <StringItem index="34" value="1983"/>
+                <StringItem index="35" value="1984"/>
+                <StringItem index="36" value="1985"/>
+                <StringItem index="37" value="1986"/>
+                <StringItem index="38" value="1987"/>
+                <StringItem index="39" value="1988"/>
+                <StringItem index="40" value="1989"/>
+                <StringItem index="41" value="1990"/>
+                <StringItem index="42" value="1991"/>
+                <StringItem index="43" value="1992"/>
+                <StringItem index="44" value="1993"/>
+                <StringItem index="45" value="1994"/>
+                <StringItem index="46" value="1995"/>
+                <StringItem index="47" value="1996"/>
+                <StringItem index="48" value="1997"/>
+                <StringItem index="49" value="1998"/>
+                <StringItem index="50" value="1999"/>
+                <StringItem index="51" value="2000"/>
+                <StringItem index="52" value="2001"/>
+                <StringItem index="53" value="2002"/>
+                <StringItem index="54" value="2003"/>
+                <StringItem index="55" value="2004"/>
+                <StringItem index="56" value="2005"/>
+                <StringItem index="57" value="2006"/>
+                <StringItem index="58" value="2007"/>
+                <StringItem index="59" value="2008"/>
+                <StringItem index="60" value="2009"/>
+                <StringItem index="61" value="2010"/>
+                <StringItem index="62" value=" "/>
+              </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="170" y="220" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_Mes">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="16" style="1"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="14">
+                <StringItem index="0" value="Mes"/>
+                <StringItem index="1" value="00"/>
+                <StringItem index="2" value="01"/>
+                <StringItem index="3" value="02"/>
+                <StringItem index="4" value="03"/>
+                <StringItem index="5" value="04"/>
+                <StringItem index="6" value="05"/>
+                <StringItem index="7" value="06"/>
+                <StringItem index="8" value="07"/>
+                <StringItem index="9" value="08"/>
+                <StringItem index="10" value="09"/>
+                <StringItem index="11" value="10"/>
+                <StringItem index="12" value="11"/>
+                <StringItem index="13" value="12"/>
+              </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="280" y="220" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox_Dia">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="16" style="1"/>
+            </Property>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="33">
+                <StringItem index="0" value="Dia"/>
+                <StringItem index="1" value="00"/>
+                <StringItem index="2" value="01"/>
+                <StringItem index="3" value="02"/>
+                <StringItem index="4" value="03"/>
+                <StringItem index="5" value="04"/>
+                <StringItem index="6" value="05"/>
+                <StringItem index="7" value="06"/>
+                <StringItem index="8" value="07"/>
+                <StringItem index="9" value="08"/>
+                <StringItem index="10" value="09"/>
+                <StringItem index="11" value="10"/>
+                <StringItem index="12" value="11"/>
+                <StringItem index="13" value="12"/>
+                <StringItem index="14" value="13"/>
+                <StringItem index="15" value="14"/>
+                <StringItem index="16" value="15"/>
+                <StringItem index="17" value="16"/>
+                <StringItem index="18" value="17"/>
+                <StringItem index="19" value="18"/>
+                <StringItem index="20" value="19"/>
+                <StringItem index="21" value="20"/>
+                <StringItem index="22" value="21"/>
+                <StringItem index="23" value="22"/>
+                <StringItem index="24" value="23"/>
+                <StringItem index="25" value="24"/>
+                <StringItem index="26" value="25"/>
+                <StringItem index="27" value="26"/>
+                <StringItem index="28" value="27"/>
+                <StringItem index="29" value="28"/>
+                <StringItem index="30" value="29"/>
+                <StringItem index="31" value="30"/>
+                <StringItem index="32" value="31"/>
+              </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="380" y="220" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton_Borrar">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Borrar"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_BorrarActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="190" y="370" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="JLabel_Titulo1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="DialogInput" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ingresa el cumplea&#xf1;os de personas "/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton_Borrar1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Volver"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor de Mano"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_Borrar1ActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="330" y="370" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

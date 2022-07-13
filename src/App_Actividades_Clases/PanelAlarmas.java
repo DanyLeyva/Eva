@@ -10,14 +10,16 @@ import javax.swing.table.DefaultTableModel;
 /**
  * @author Mendoza Castañeda José Ricardo
  */
+
 public class PanelAlarmas extends javax.swing.JPanel {
     private AccionesAlarmas acciones = new AccionesAlarmas();
     private int id = 1;
     private DefaultTableModel model;
 
-    public PanelAlarmas() {
+    public PanelAlarmas( int id ) {
         initComponents();
         model = (DefaultTableModel) table.getModel();
+        this.id = id;
         
         this.limpiarTabla();
         this.consultarAlarmas();
@@ -27,6 +29,7 @@ public class PanelAlarmas extends javax.swing.JPanel {
     }
     public void consultarAlarmas() {
         Vector<Object[]> alarmas = acciones.getAlarmas( id );
+        System.out.println( alarmas );
         for (int i = 0; i < alarmas.size(); i++)
         {
             Object[] alarm = alarmas.elementAt(i);
@@ -53,7 +56,7 @@ public class PanelAlarmas extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "ID: ", "Hora", "Nombre"
+                "ID: ", "Nombre:", "Hora:"
             }
         ));
         table.addMouseListener(new java.awt.event.MouseAdapter() {

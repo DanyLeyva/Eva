@@ -5,6 +5,7 @@
  */
 package App_Interfaces;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,97 +32,197 @@ public class Caso_Actividades extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton_Menu = new javax.swing.JButton();
-        jButton_Ayuda = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jPanel_fondo = new javax.swing.JPanel();
+        rSLabelFecha = new rojeru_san.RSLabelFecha();
+        rSLabelHora = new rojeru_san.RSLabelHora();
+        jButton_AcercaEva = new javax.swing.JButton();
         jButton_Alarmas = new javax.swing.JButton();
         jButton_Buscar = new javax.swing.JButton();
-        jButton_AcercaEva = new javax.swing.JButton();
+        jButton_Menu = new javax.swing.JButton();
+        jButton_Ayuda = new javax.swing.JButton();
+        jLabel_Invisible = new javax.swing.JLabel();
+        jPanel_Header = new javax.swing.JPanel();
+        jLabel_Salir = new javax.swing.JLabel();
+        jLabel_HeaderActividades = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
-        jButton_Menu.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton_Menu.setText("Menú");
+        jPanel_fondo.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel_fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton_Ayuda.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton_Ayuda.setText("Ayuda (muestra contactos de emergencia)");
+        rSLabelFecha.setBackground(new java.awt.Color(204, 204, 204));
+        rSLabelFecha.setForeground(new java.awt.Color(0, 0, 0));
+        rSLabelFecha.setFont(new java.awt.Font("Roboto Bold", 1, 24)); // NOI18N
+        rSLabelFecha.setFormato("EEEE/dd/MMMM/yyyy");
+        jPanel_fondo.add(rSLabelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 290, -1));
 
-        jButton_Alarmas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton_Alarmas.setText("Alarmas programadas");
-        jButton_Alarmas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_AlarmasActionPerformed(evt);
-            }
-        });
+        rSLabelHora.setBackground(new java.awt.Color(102, 102, 255));
+        rSLabelHora.setFont(new java.awt.Font("Roboto Bold", 1, 36)); // NOI18N
+        jPanel_fondo.add(rSLabelHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 290, 100));
 
-        jButton_Buscar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton_Buscar.setText("Buscar (informacion ingresada en el menú)");
-        jButton_Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_BuscarActionPerformed(evt);
-            }
-        });
-
-        jButton_AcercaEva.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton_AcercaEva.setText("Acerca de Eva");
+        jButton_AcercaEva.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_AcercaEva.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton_AcercaEva.setText("Acerca de eva");
         jButton_AcercaEva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_AcercaEvaActionPerformed(evt);
             }
         });
+        jPanel_fondo.add(jButton_AcercaEva, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 530, -1));
+
+        jButton_Alarmas.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_Alarmas.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton_Alarmas.setText("Alarmas Programadas");
+        jPanel_fondo.add(jButton_Alarmas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 530, -1));
+
+        jButton_Buscar.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_Buscar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton_Buscar.setText("Buscar (Informacion ingresada en el menu)");
+        jPanel_fondo.add(jButton_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 530, -1));
+
+        jButton_Menu.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_Menu.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton_Menu.setText("Menu");
+        jPanel_fondo.add(jButton_Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 530, -1));
+
+        jButton_Ayuda.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_Ayuda.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton_Ayuda.setText("Ayuda (En casos de emergencia)");
+        jPanel_fondo.add(jButton_Ayuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 530, -1));
+        jPanel_fondo.add(jLabel_Invisible, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 40, 20));
+
+        jPanel_Header.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel_Header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel_HeaderMouseDragged(evt);
+            }
+        });
+        jPanel_Header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel_HeaderMousePressed(evt);
+            }
+        });
+
+        jLabel_Salir.setBackground(java.awt.Color.blue);
+        jLabel_Salir.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabel_Salir.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Salir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_Salir.setText("X");
+        jLabel_Salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel_Salir.setOpaque(true);
+        jLabel_Salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_SalirMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel_SalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel_SalirMouseExited(evt);
+            }
+        });
+
+        jLabel_HeaderActividades.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel_HeaderActividades.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_HeaderActividades.setText("Actividades");
+
+        javax.swing.GroupLayout jPanel_HeaderLayout = new javax.swing.GroupLayout(jPanel_Header);
+        jPanel_Header.setLayout(jPanel_HeaderLayout);
+        jPanel_HeaderLayout.setHorizontalGroup(
+            jPanel_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_HeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel_HeaderActividades)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 710, Short.MAX_VALUE)
+                .addComponent(jLabel_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel_HeaderLayout.setVerticalGroup(
+            jPanel_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel_HeaderActividades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel_Salir, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
+        );
+
+        jPanel_fondo.add(jPanel_Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton_Menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_Ayuda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_Alarmas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_Buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_AcercaEva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addComponent(jPanel_fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 856, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton_Menu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_Ayuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_Alarmas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_Buscar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_AcercaEva)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel_fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_AlarmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AlarmasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_AlarmasActionPerformed
+    
+    // <editor-fold defaultstate="collapsed" desc="Header">
+     int xMouse,yMouse;
+    
+    private void jPanel_HeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_HeaderMousePressed
+        // Almacenar posicion
+        xMouse= evt.getX();
+        yMouse= evt.getY();
+        
+    }//GEN-LAST:event_jPanel_HeaderMousePressed
 
-    private void jButton_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_BuscarActionPerformed
+    private void jPanel_HeaderMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_HeaderMouseDragged
+        // Evento mouse arrastrado
+        
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        this.setLocation(x-xMouse, y-yMouse);
+        
+    }//GEN-LAST:event_jPanel_HeaderMouseDragged
 
+    private void jLabel_SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SalirMouseClicked
+        // accion salir
+        
+        System.exit(0);
+    }//GEN-LAST:event_jLabel_SalirMouseClicked
+
+    private void jLabel_SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SalirMouseEntered
+        // Colorear cuando pasa encima el cursor
+        jLabel_Salir.setBackground(Color.red);
+        jLabel_Salir.setForeground(Color.black);
+    }//GEN-LAST:event_jLabel_SalirMouseEntered
+
+    private void jLabel_SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SalirMouseExited
+        // colorear cuando sale el cursor
+        jLabel_Salir.setBackground(Color.BLUE);
+        jLabel_Salir.setForeground(Color.white);
+    }//GEN-LAST:event_jLabel_SalirMouseExited
+// </editor-fold>
+    
+    
+    
     private void jButton_AcercaEvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AcercaEvaActionPerformed
-        // Muestra informacion sobre Eva
-        Caso_InicioV llamaInicio = new Caso_InicioV();
-
+        // Boton acerca de Eva
+        
         dispose();
-
+        
         JOptionPane.showMessageDialog(null, "Mi nombre es Eva y fui programada para \n ayudar a gente con alzheimer leve o moderado ");
         JOptionPane.showMessageDialog(null, "Mi objetivo es convertirme en una inteligencia artificial \n y así poder ayudar más a las personas");
-        JOptionPane.showMessageDialog(null, "Por lo mientras estaré para apoyarte con \n lo que esté dentro de mis posibilidades, un gusto ");
+        JOptionPane.showMessageDialog(null, "Por lo mientras estaré para apoyarte con \n lo que esté dentro de mis posibilidades.");
 
         setVisible(true);
+        
     }//GEN-LAST:event_jButton_AcercaEvaActionPerformed
-
+// </editor-fold> 
+    
+   
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -158,10 +259,18 @@ public class Caso_Actividades extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_AcercaEva;
     private javax.swing.JButton jButton_Alarmas;
     private javax.swing.JButton jButton_Ayuda;
     private javax.swing.JButton jButton_Buscar;
     private javax.swing.JButton jButton_Menu;
+    private javax.swing.JLabel jLabel_HeaderActividades;
+    private javax.swing.JLabel jLabel_Invisible;
+    private javax.swing.JLabel jLabel_Salir;
+    private javax.swing.JPanel jPanel_Header;
+    private javax.swing.JPanel jPanel_fondo;
+    private rojeru_san.RSLabelFecha rSLabelFecha;
+    private rojeru_san.RSLabelHora rSLabelHora;
     // End of variables declaration//GEN-END:variables
 }

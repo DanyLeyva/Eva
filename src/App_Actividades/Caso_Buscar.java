@@ -1,8 +1,6 @@
 /** CASO BUSCAR.
  * Su objetivo es buscar la información que desee ver el usuario de la base de datos.
  * Hay 5 casos en los cuales el usuario podra ver la información. 
- * 
- * Panel Alarmas .- Completado
  */
 package App_Actividades;
 
@@ -12,14 +10,18 @@ import App_Actividades_Clases.PanelMedicinas;
 import App_Actividades_Clases.PanelPasatiempos;
 import java.awt.BorderLayout;
 
+
 /**
  * @author Mendoza Castañeda José Ricardo
  */
 
 public class Caso_Buscar extends javax.swing.JFrame {
+    public int id = 1;
 
     public Caso_Buscar() {
         initComponents();
+        
+        lblTitle.setText(" Buscar Información de ID: " + id);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -159,7 +161,7 @@ public class Caso_Buscar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFamActionPerformed
-        PanelFamiliares panel = new PanelFamiliares();
+        PanelFamiliares panel = new PanelFamiliares( id );
         panel.setSize(545, 441);
         panel.setLocation( 1, 1 );
         
@@ -170,7 +172,7 @@ public class Caso_Buscar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFamActionPerformed
 
     private void btnPasatiemposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPasatiemposActionPerformed
-        PanelPasatiempos panel = new PanelPasatiempos();
+        PanelPasatiempos panel = new PanelPasatiempos( id );
         panel.setSize(545, 441);
         panel.setLocation( 1, 1 );
         
@@ -181,7 +183,7 @@ public class Caso_Buscar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPasatiemposActionPerformed
 
     private void btnMedicinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicinasActionPerformed
-        PanelMedicinas panel = new PanelMedicinas();
+        PanelMedicinas panel = new PanelMedicinas( id );
         panel.setSize(545, 441);
         panel.setLocation( 1, 1 );
         
@@ -192,7 +194,7 @@ public class Caso_Buscar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMedicinasActionPerformed
 
     private void btnAlarmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlarmasActionPerformed
-        PanelAlarmas panel = new PanelAlarmas();
+        PanelAlarmas panel = new PanelAlarmas( id );
         panel.setSize(545, 441);
         panel.setLocation( 1, 1 );
         

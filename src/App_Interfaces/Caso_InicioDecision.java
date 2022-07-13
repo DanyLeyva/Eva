@@ -5,6 +5,11 @@
  */
 package App_Interfaces;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan Pablo
@@ -16,7 +21,8 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
      */
     public Caso_InicioDecision() {
         initComponents();
-                setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
+        cerrar();
 
     }
 
@@ -29,73 +35,99 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel_IngresaUsuario1 = new javax.swing.JLabel();
         jButton_Si = new javax.swing.JButton();
         jButton_No = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel_IngresaUsuario1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel_IngresaUsuario1.setText("¿Iniciar configuración?");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel_IngresaUsuario1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel_IngresaUsuario1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel_IngresaUsuario1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel_IngresaUsuario1.setText("¿Iniciar configuración?");
+        jPanel1.add(jLabel_IngresaUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jButton_Si.setBackground(new java.awt.Color(204, 204, 255));
         jButton_Si.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jButton_Si.setForeground(new java.awt.Color(0, 0, 0));
         jButton_Si.setText("Si");
+        jButton_Si.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_Si.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_SiActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_Si, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 70, -1));
 
+        jButton_No.setBackground(new java.awt.Color(204, 204, 255));
         jButton_No.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jButton_No.setForeground(new java.awt.Color(0, 0, 0));
         jButton_No.setText("No");
+        jButton_No.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_No.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_NoActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_No, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jButton_Si, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_No, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_IngresaUsuario1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_IngresaUsuario1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_Si)
-                    .addComponent(jButton_No))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //<editor-fold defaultstate="collapsed" desc="Confirmar cierre de programa">
+    public void cerrar() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    confirmarSalida();
+
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void confirmarSalida() {
+
+        int valor = JOptionPane.showConfirmDialog(this, "¿Estás segur@ de cerrar el programa?", "Advertencia", JOptionPane.YES_NO_OPTION);
+
+        if (valor == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Gracias por utilizar el programa :)", "Gracias", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
+        }
+    }
+
+    // </editor-fold> 
+
     private void jButton_SiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SiActionPerformed
         // boton si
 
-        //dispose();
-
+        dispose();
         new Caso_Menu().setVisible(true);
     }//GEN-LAST:event_jButton_SiActionPerformed
 
     private void jButton_NoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NoActionPerformed
         // boton no
 
-        //dispose();
+        dispose();
         new Caso_Actividades().setVisible(true);
 
     }//GEN-LAST:event_jButton_NoActionPerformed
@@ -139,5 +171,6 @@ public class Caso_InicioDecision extends javax.swing.JFrame {
     private javax.swing.JButton jButton_No;
     private javax.swing.JButton jButton_Si;
     private javax.swing.JLabel jLabel_IngresaUsuario1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

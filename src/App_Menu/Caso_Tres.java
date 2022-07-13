@@ -5,13 +5,16 @@
  */
 package App_Menu;
 
-import App_Menu_Clases.Caso_dos;
-import App_Menu_Clases.Caso_tres;
+
 import App_Menu_Clases.Confirmacion_config;
+import app_connection.Conexion_Base;
 import com.mysql.jdbc.Connection;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +28,8 @@ public class Caso_Tres extends javax.swing.JFrame {
      */
     public Caso_Tres() {
         initComponents();
+        setLocationRelativeTo(null);
+        cerrar();
     }
 
     /**
@@ -159,16 +164,42 @@ public class Caso_Tres extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //<editor-fold defaultstate="collapsed" desc="Confirmar cierre de programa">
+    public void cerrar() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    confirmarSalida();
+
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void confirmarSalida(){
+        
+    int valor = JOptionPane.showConfirmDialog(this, "¿Estás segur@ de cerrar el programa?","Advertencia",JOptionPane.YES_NO_OPTION);
+    
+    if(valor==JOptionPane.YES_OPTION){
+        JOptionPane.showMessageDialog(null, "Gracias por utilizar el programa :)","Gracias",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
+    }
+}// </editor-fold>
+    
     private void jButton_SaveAlarmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SaveAlarmasActionPerformed
         // Boton Guardar
-        Caso_tres objeto = new Caso_tres();
+        Conexion_Base objeto = new Conexion_Base();
         Confirmacion_config objeto2 = new Confirmacion_config();
         BD(); 
         objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
         Vacia();
     }//GEN-LAST:event_jButton_SaveAlarmasActionPerformed
 
-    Caso_tres con = new Caso_tres();
+    Conexion_Base con = new Conexion_Base();
     Connection cn = (Connection) con.conexion();
     
      public void Vacia(){

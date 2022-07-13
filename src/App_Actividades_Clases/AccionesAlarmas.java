@@ -3,11 +3,11 @@
  */
 package App_Actividades_Clases;
 
-import app_connection.ConexionDB;
+
+import app_connection.Conexion_Base;
 import com.mysql.jdbc.ResultSetImpl;
 import com.mysql.jdbc.Statement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
@@ -26,15 +26,15 @@ import java.util.Vector;
 tableUsers.getRowCount() - Cantidad total de Filas
 */
 public class AccionesAlarmas {
-    private ConexionDB conexion; 
+    private Conexion_Base conexion; 
     private Connection con;
     private Statement st;
     private ResultSetImpl res;
     private SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
     
     public AccionesAlarmas() {
-        conexion = new ConexionDB();
-        con = conexion.conectar();
+        conexion = new Conexion_Base();
+        con = conexion.conexion();
         try {
             st = (Statement) con.createStatement();
         } catch (SQLException ex) {
@@ -43,6 +43,7 @@ public class AccionesAlarmas {
         }
     }
     public Vector<Object[]> getAlarmas( int id ) {
+        // Cambiado
         try {
             String query = "select id_alarmas_extra, alarmas_extra, nombre from alarmas where FK_usuario=" + id + ";";
             res = (ResultSetImpl) st.executeQuery(query);
@@ -50,10 +51,10 @@ public class AccionesAlarmas {
             Vector<Object[]> alarmas = new Vector(10, 1);
             while( res.next() ) {
                 Object[] alarma = new Object[3];
-   
+           
                 alarma[0] = res.getInt("id_alarmas_extra");                
-                alarma[1] = res.getLong("alarmas_extra");
-                alarma[2] = res.getString("nombre");
+                alarma[1] = res.getString("nombre");
+                alarma[2] = res.getLong("alarmas_extra");
                 
                 alarmas.addElement( alarma );
             }
@@ -79,7 +80,7 @@ public class AccionesAlarmas {
             return false;
         }
     }
-    public boolean eliminarAlarma( int id ) {
+    public boolean eliminar( int id ) {
         try {
             String query = "delete from alarmas where id_alarmas_extra = " + id + ";";
             st.executeUpdate( query );

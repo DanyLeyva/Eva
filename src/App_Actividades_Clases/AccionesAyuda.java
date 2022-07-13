@@ -1,7 +1,7 @@
 
 package App_Actividades_Clases;
 
-import app_connection.ConexionDB;
+import app_connection.Conexion_Base;
 import com.mysql.jdbc.ResultSetImpl;
 import com.mysql.jdbc.Statement;
 import java.sql.Connection;
@@ -17,14 +17,14 @@ import java.util.Vector;
  * FK_usuario - int y debe de existir usuario con ese ID
  */
 public class AccionesAyuda {
-    private ConexionDB conexion; 
+    private Conexion_Base conexion; 
     private Connection con;
     private Statement st;
     private ResultSetImpl res;
 
     public AccionesAyuda() {
-        conexion = new ConexionDB();
-        con = conexion.conectar();
+        conexion = new Conexion_Base();
+        con = conexion.conexion();
         try {
             st = (Statement) con.createStatement();
         } catch (SQLException ex) {
@@ -45,8 +45,8 @@ public class AccionesAyuda {
    
                 numero[0] = res.getInt("id_ayuda");                
                 numero[1] = res.getString("nombre");
-                numero[2] = res.getString("parentesco");
-                numero[3] = res.getString("numero");
+                numero[2] = res.getString("numero");
+                numero[3] = res.getString("parentesco");
                 
                 numeros.addElement( numero );
             }
@@ -59,6 +59,19 @@ public class AccionesAyuda {
             this.cerrarConexion();
             return null;
         }
+    }
+    public boolean eliminar( int id ) {
+        try {
+            String query = "delete from caso_cuatro where id_ayuda = " + id + ";";
+            st.executeUpdate( query );
+            return true;
+        } catch (SQLException ex) {
+            System.out.println(" - No se pudo eliminar la alarma");
+            System.out.println( ex );
+            this.cerrarConexion();
+            return false;
+        }
+        
     }
     public final void cerrarConexion() {
         try {

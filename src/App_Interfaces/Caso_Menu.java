@@ -5,6 +5,12 @@
  */
 package App_Interfaces;
 
+import App_Menu.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan Pablo
@@ -17,7 +23,7 @@ public class Caso_Menu extends javax.swing.JFrame {
     public Caso_Menu() {
         initComponents();
         setLocationRelativeTo(null);
-
+        cerrar();
     }
 
     /**
@@ -29,87 +35,178 @@ public class Caso_Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButton_NombresImporantes = new javax.swing.JButton();
         jButton_Pasatiempos = new javax.swing.JButton();
         jButton_HoraDormir = new javax.swing.JButton();
         jButton_Contactos = new javax.swing.JButton();
-        jButton_Medicinas = new javax.swing.JButton();
         jButton_DatosPersonales = new javax.swing.JButton();
+        jButton_Medicinas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton_NombresImporantes.setBackground(new java.awt.Color(204, 204, 255));
         jButton_NombresImporantes.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_NombresImporantes.setForeground(new java.awt.Color(0, 0, 0));
         jButton_NombresImporantes.setText("Dime el nombre y cumpleaños depersonas importantes para ti");
+        jButton_NombresImporantes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_NombresImporantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_NombresImporantesActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_NombresImporantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 560, -1));
 
+        jButton_Pasatiempos.setBackground(new java.awt.Color(204, 204, 255));
         jButton_Pasatiempos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_Pasatiempos.setForeground(new java.awt.Color(0, 0, 0));
         jButton_Pasatiempos.setText("Que es lo que te gusta hacer a diario u ocacionalmente");
+        jButton_Pasatiempos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_Pasatiempos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_PasatiemposActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_Pasatiempos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 560, -1));
 
+        jButton_HoraDormir.setBackground(new java.awt.Color(204, 204, 255));
         jButton_HoraDormir.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_HoraDormir.setForeground(new java.awt.Color(0, 0, 0));
         jButton_HoraDormir.setText("Ingresar hora de dormir y de despertar");
+        jButton_HoraDormir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_HoraDormir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_HoraDormirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_HoraDormir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 560, -1));
 
+        jButton_Contactos.setBackground(new java.awt.Color(204, 204, 255));
         jButton_Contactos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_Contactos.setForeground(new java.awt.Color(0, 0, 0));
         jButton_Contactos.setText("Ingresar números de telefono de personas importantes");
+        jButton_Contactos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_Contactos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ContactosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_Contactos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 560, -1));
 
-        jButton_Medicinas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton_Medicinas.setText("Añadir medicinas que debo tomar y cuándo las debo tomar");
-
+        jButton_DatosPersonales.setBackground(new java.awt.Color(204, 204, 255));
         jButton_DatosPersonales.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_DatosPersonales.setForeground(new java.awt.Color(0, 0, 0));
         jButton_DatosPersonales.setText("Ingresar mis datos personales (En caso de que olvides quien eres)");
+        jButton_DatosPersonales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_DatosPersonales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_DatosPersonalesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_DatosPersonales, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+
+        jButton_Medicinas.setBackground(new java.awt.Color(204, 204, 255));
+        jButton_Medicinas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_Medicinas.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Medicinas.setText("Añadir medicinas que debo tomar y cuándo las debo tomar");
+        jButton_Medicinas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_Medicinas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_MedicinasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton_Medicinas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 560, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton_Contactos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_Pasatiempos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_HoraDormir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_DatosPersonales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_Medicinas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_NombresImporantes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jButton_NombresImporantes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_Pasatiempos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_HoraDormir)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_Contactos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_DatosPersonales)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_Medicinas)
-                .addGap(20, 20, 20))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_NombresImporantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NombresImporantesActionPerformed
-        // TODO add your handling code here:
+ //<editor-fold defaultstate="collapsed" desc="Confirmar cierre de programa">
+    public void cerrar() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    confirmarSalida();
 
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void confirmarSalida(){
+        
+    int valor = JOptionPane.showConfirmDialog(this, "¿Estás segur@ de cerrar el programa?","Advertencia",JOptionPane.YES_NO_OPTION);
+    
+    if(valor==JOptionPane.YES_OPTION){
+        JOptionPane.showMessageDialog(null, "Gracias por utilizar el programa :)","Gracias",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
+    }
+}// </editor-fold>
+    
+    private void jButton_NombresImporantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NombresImporantesActionPerformed
+        // Caso uno
+        
+        dispose();
+        
+        new Caso_Uno().setVisible(true);
     }//GEN-LAST:event_jButton_NombresImporantesActionPerformed
 
     private void jButton_PasatiemposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PasatiemposActionPerformed
-        // TODO add your handling code here:
+        // Caso dos
+        
+        dispose();
+        
+        new Caso_Dos().setVisible(true);
     }//GEN-LAST:event_jButton_PasatiemposActionPerformed
+
+    private void jButton_HoraDormirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_HoraDormirActionPerformed
+        // Caso tres
+        
+        dispose();
+        
+        new Caso_Tres().setVisible(true);
+    }//GEN-LAST:event_jButton_HoraDormirActionPerformed
+
+    private void jButton_ContactosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ContactosActionPerformed
+        // Caso cuatro
+        
+        dispose();
+        
+        new Caso_Cuatro().setVisible(true);
+    }//GEN-LAST:event_jButton_ContactosActionPerformed
+
+    private void jButton_MedicinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_MedicinasActionPerformed
+        // Caso Seis
+        
+        dispose();
+        
+        new Caso_Seis().setVisible(true);
+    }//GEN-LAST:event_jButton_MedicinasActionPerformed
+
+    private void jButton_DatosPersonalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DatosPersonalesActionPerformed
+        // Caso cinco
+        
+        dispose();
+        
+        new Caso_Cinco().setVisible(true);
+    }//GEN-LAST:event_jButton_DatosPersonalesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,5 +250,6 @@ public class Caso_Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Medicinas;
     private javax.swing.JButton jButton_NombresImporantes;
     private javax.swing.JButton jButton_Pasatiempos;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

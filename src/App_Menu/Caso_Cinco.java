@@ -5,12 +5,15 @@
  */
 package App_Menu;
 
-import App_Menu_Clases.Caso_cinco;
 import App_Menu_Clases.Confirmacion_config;
+import app_connection.Conexion_Base;
 import com.mysql.jdbc.Connection;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,6 +27,8 @@ public class Caso_Cinco extends javax.swing.JFrame {
      */
     public Caso_Cinco() {
         initComponents();
+        setLocationRelativeTo(null);
+        cerrar();
     }
 
     /**
@@ -47,6 +52,7 @@ public class Caso_Cinco extends javax.swing.JFrame {
         jLabel_BirthdayPesona1 = new javax.swing.JLabel();
         jButton_Borrar = new javax.swing.JButton();
         jTextField_Birthday = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,6 +86,17 @@ public class Caso_Cinco extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,12 +108,6 @@ public class Caso_Cinco extends javax.swing.JFrame {
                         .addComponent(jLabel_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
                         .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(222, 222, 222)
-                        .addComponent(jLabel_TituloDatos))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jLabel_AvisoDatos))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -114,25 +125,39 @@ public class Caso_Cinco extends javax.swing.JFrame {
                                 .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField_Birthday))))
+                            .addComponent(jTextField_Birthday)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(122, 122, 122)
+                                .addComponent(jLabel_TituloDatos))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(88, 88, 88)
+                                .addComponent(jLabel_AvisoDatos)))))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel_TituloDatos)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel_AvisoDatos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel_TituloDatos)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel_AvisoDatos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel_Direccion)
+                                    .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(64, 64, 64))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_Direccion)
-                            .addComponent(jTextField_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(64, 64, 64)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_BirthdayPesona1)
                     .addComponent(jTextField_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -152,9 +177,35 @@ public class Caso_Cinco extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //<editor-fold defaultstate="collapsed" desc="Confirmar cierre de programa">
+    public void cerrar() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    confirmarSalida();
+
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void confirmarSalida(){
+        
+    int valor = JOptionPane.showConfirmDialog(this, "¿Estás segur@ de cerrar el programa?","Advertencia",JOptionPane.YES_NO_OPTION);
+    
+    if(valor==JOptionPane.YES_OPTION){
+        JOptionPane.showMessageDialog(null, "Gracias por utilizar el programa :)","Gracias",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
+    }
+}// </editor-fold>
+    
     private void jButton_SaveDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SaveDPActionPerformed
         // Boton Save
-        Caso_cinco objeto = new Caso_cinco();
+        Conexion_Base objeto = new Conexion_Base();
         Confirmacion_config objeto2 = new Confirmacion_config();
         BD();
         objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
@@ -166,7 +217,7 @@ public class Caso_Cinco extends javax.swing.JFrame {
         BDB();
     }//GEN-LAST:event_jButton_BorrarActionPerformed
     
-    Caso_cinco con = new Caso_cinco(); 
+    Conexion_Base con = new Conexion_Base(); 
     Connection cn = (Connection) con.conexion();
     
     String Horas,Minutos,Segundos,Year,Mes,Dia;
@@ -265,6 +316,7 @@ public class Caso_Cinco extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_BirthdayPesona2;
     private javax.swing.JLabel jLabel_Direccion;
     private javax.swing.JLabel jLabel_TituloDatos;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField_Birthday;
     private javax.swing.JTextField jTextField_Direccion;
     // End of variables declaration//GEN-END:variables

@@ -2,7 +2,7 @@
  */
 package App_Actividades_Clases;
 
-import app_connection.ConexionDB;
+import app_connection.Conexion_Base;
 import com.mysql.jdbc.ResultSetImpl;
 import com.mysql.jdbc.Statement;
 import java.sql.Connection;
@@ -15,14 +15,14 @@ import java.util.Vector;
 
 public class AccionesFamiliares {
 
-    private ConexionDB conexion;
+    private Conexion_Base conexion;
     private Connection con;
     private Statement st;
     private ResultSetImpl res;
 
     public AccionesFamiliares() {
-        conexion = new ConexionDB();
-        con = conexion.conectar();
+        conexion = new Conexion_Base();
+        con = conexion.conexion();
         try {
             st = (Statement) con.createStatement();
         } catch (SQLException ex) {
@@ -33,17 +33,18 @@ public class AccionesFamiliares {
 
     public Vector<Object[]> getFamiliares(int id) {
         try {
-            String query = "select nombre, parentesco, cumpleaños from caso_uno where FK_usuario=" + id + ";";
+            String query = "select id_conocidos, nombre, parentesco, cumpleaños from caso_uno where FK_usuario=" + id + ";";
             res = (ResultSetImpl) st.executeQuery(query);
 
             Vector<Object[]> familiares = new Vector(10, 1);
 
             while (res.next()) {
-                Object[] familiar = new Object[3];
+                Object[] familiar = new Object[4];
 
-                familiar[0] = res.getString("nombre");
-                familiar[1] = res.getString("parentesco");
+                familiar[0] = res.getInt("id_conocidos");
+                familiar[1] = res.getString("nombre");
                 familiar[2] = res.getString("cumpleaños");
+                familiar[3] = res.getString("parentesco");
 
                 familiares.addElement( familiar );
             }
@@ -56,6 +57,18 @@ public class AccionesFamiliares {
             this.cerrarConexion();
             return null;
         }
+    }
+    public boolean eliminar( int id ) {
+        try {
+            String query = "delete from caso_uno where id_conocidos = " + id + ";";
+            st.executeUpdate( query );
+            return true;
+        } catch (SQLException ex) {
+            System.out.println(" - No se pudo eliminar la alarma");
+            System.out.println( ex );
+            this.cerrarConexion();
+            return false;
+        } 
     }
 
     public final void cerrarConexion() {
