@@ -5,6 +5,14 @@
  */
 package App_Menu;
 
+import App_Menu_Clases.Caso_seis;
+import App_Menu_Clases.Confirmacion_config;
+import com.mysql.jdbc.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -27,22 +35,196 @@ public class Caso_Seis extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_TituloMedicinas = new javax.swing.JLabel();
+        jLabel_AvisoMedicinas = new javax.swing.JLabel();
+        jLabel_Pesona1 = new javax.swing.JLabel();
+        jLabel_NamePesona1 = new javax.swing.JLabel();
+        jTextField_NameMedicina = new javax.swing.JTextField();
+        jButton_SaveMedicinas = new javax.swing.JButton();
+        jLabel_FormatoTiempo = new javax.swing.JLabel();
+        jLabel_BirthdayPesona2 = new javax.swing.JLabel();
+        jComboBox_Hour = new javax.swing.JComboBox<>();
+        jComboBox_Min = new javax.swing.JComboBox<>();
+        jComboBox_Seg = new javax.swing.JComboBox<>();
+        jButton_Borrar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel_TituloMedicinas.setText(" Dime a que hora te tocan tus medicinas y el nombre de cada una de ellas");
+
+        jLabel_AvisoMedicinas.setText("Recuerda que en cualquier momento puedes agregar mas medicinas desde el menu!!!");
+
+        jLabel_Pesona1.setText("Medicina 1");
+
+        jLabel_NamePesona1.setText("Nombre");
+
+        jButton_SaveMedicinas.setText("Guardar");
+        jButton_SaveMedicinas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SaveMedicinasActionPerformed(evt);
+            }
+        });
+
+        jLabel_FormatoTiempo.setText("Formato de las alarmas: HH : MM ");
+
+        jLabel_BirthdayPesona2.setText("Hora a recordar");
+
+        jComboBox_Hour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hour", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" }));
+
+        jComboBox_Min.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Min", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        jComboBox_Seg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seg", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        jButton_Borrar.setText("Borrar");
+        jButton_Borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_BorrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(345, 345, 345)
+                .addComponent(jButton_SaveMedicinas)
+                .addGap(93, 93, 93)
+                .addComponent(jButton_Borrar)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_FormatoTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel_BirthdayPesona2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel_NamePesona1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox_Hour, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField_NameMedicina))))
+                .addContainerGap(190, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel_TituloMedicinas)
+                        .addGap(232, 232, 232))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel_AvisoMedicinas)
+                        .addGap(186, 186, 186))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel_Pesona1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(347, 347, 347))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel_TituloMedicinas)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel_AvisoMedicinas)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel_FormatoTiempo)
+                .addGap(85, 85, 85)
+                .addComponent(jLabel_Pesona1)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextField_NameMedicina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox_Hour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox_Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox_Seg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel_NamePesona1)
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel_BirthdayPesona2)))
+                .addGap(188, 188, 188)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_SaveMedicinas)
+                    .addComponent(jButton_Borrar))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_SaveMedicinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SaveMedicinasActionPerformed
+        // Boton Save
+        Caso_seis objeto = new Caso_seis();
+        Confirmacion_config objeto2 = new Confirmacion_config();
+        BD();
+        objeto2.confirmacion = JOptionPane.showInputDialog(null, "Te gustaria configurar otra opcion?");
+        
+    }//GEN-LAST:event_jButton_SaveMedicinasActionPerformed
+
+    private void jButton_BorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BorrarActionPerformed
+        // Boton Borrar
+        BDB();
+    }//GEN-LAST:event_jButton_BorrarActionPerformed
+
+    Caso_seis con = new Caso_seis();
+    Connection cn = (Connection) con.conexion();
+    
+     String Horas,Minutos,Segundos,Year,Mes,Dia;
+     
+    public void ObtenTiempo(){
+        Horas = (String) jComboBox_Hour.getSelectedItem();
+        Minutos = (String) jComboBox_Min.getSelectedItem();
+        Segundos = (String) jComboBox_Seg.getSelectedItem();
+        
+    }
+    
+    public void Vacia(){
+    jTextField_NameMedicina.setText("");
+    jComboBox_Hour.setSelectedItem("Hour");
+    jComboBox_Min.setSelectedItem("Min");
+    jComboBox_Seg.setSelectedItem("Seg");}
+    
+    
+    public void BD(){
+        ObtenTiempo();
+        try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_NameMedicina.getText().equals("")){
+        PreparedStatement pps = cn.prepareStatement("INSERT INTO caso_seis(nombre,alarma_medicinas,FK_usuario) VALUES(?,?,?)");
+             pps.setString(1, jTextField_NameMedicina.getText());
+             pps.setString(2, Horas+":"+Minutos+":"+Segundos);
+             pps.setString(3, Integer.toString(con.Usuarios));
+             pps.executeUpdate();
+              }
+              }
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Seis.class.getName()).log(Level.SEVERE, null,ex);
+        }
+    }
+    
+     public void BDB(){
+         try{
+          for(int i = 0; i < 1;i++){
+              if(!jTextField_NameMedicina.getText().equals("")){
+             PreparedStatement pps = cn.prepareStatement("delete from caso_seis where nombre='"+jTextField_NameMedicina.getText()+"'");
+             pps.executeUpdate();
+              }
+              
+          }
+        }catch(Exception ex){
+            Logger.getLogger(Caso_Seis.class.getName()).log(Level.SEVERE, null,ex);
+        }
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -69,6 +251,7 @@ public class Caso_Seis extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Caso_Seis.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +262,17 @@ public class Caso_Seis extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_Borrar;
+    private javax.swing.JButton jButton_SaveMedicinas;
+    private javax.swing.JComboBox<String> jComboBox_Hour;
+    private javax.swing.JComboBox<String> jComboBox_Min;
+    private javax.swing.JComboBox<String> jComboBox_Seg;
+    private javax.swing.JLabel jLabel_AvisoMedicinas;
+    private javax.swing.JLabel jLabel_BirthdayPesona2;
+    private javax.swing.JLabel jLabel_FormatoTiempo;
+    private javax.swing.JLabel jLabel_NamePesona1;
+    private javax.swing.JLabel jLabel_Pesona1;
+    private javax.swing.JLabel jLabel_TituloMedicinas;
+    public javax.swing.JTextField jTextField_NameMedicina;
     // End of variables declaration//GEN-END:variables
 }

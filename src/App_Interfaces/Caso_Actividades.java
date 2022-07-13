@@ -111,7 +111,7 @@ public class Caso_Actividades extends javax.swing.JFrame {
 
     private void jButton_AcercaEvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AcercaEvaActionPerformed
         // Muestra informacion sobre Eva
-        Caso_Inicio llamaInicio = new Caso_Inicio();
+        Caso_InicioV llamaInicio = new Caso_InicioV();
 
         dispose();
 

@@ -270,13 +270,17 @@ public class AsistentePersonalEva {
                 if (actividades.equals("MENU")) {
                     decision = "SI";
                     ciclo = "NO";
-                } else if (actividades.equals("AYUDA")) {
+                } 
+                // SHO
+                else if (actividades.equals("AYUDA")) {
                     System.out.println("\nPuedes llamar a estos contactos\n");
                     for (int i = 0; i < capacidad4; i++) {
                         System.out.println(caso4.elementAt(i) + " es tu " + caso44.elementAt(i) + " --- " + caso444.elementAt(i));
                     }
                     System.out.println("emergencias --- 911\n");
-                } else if (actividades.equals("ALARMA")) {
+                } 
+                // Tambien SHO
+                else if (actividades.equals("ALARMA")) {
                     System.out.print("\n¿Cuantas alarmas deseas poner? ");
                     capacidadalarmas = cApacidadalarmas.nextInt();
                     capacidadalarmas = capacidadalarmas + acumuladorextra;
@@ -522,7 +526,9 @@ public class AsistentePersonalEva {
                             }
                         }
                     }
-                } else if (actividades.equals("BUSCAR")) {
+                } 
+                // CASO Buscar 0_*
+                else if (actividades.equals("BUSCAR")) {
                     do {
                         System.out.println("\n1: Dime el nombre y cumpleaños de tus familiares o amigos mas cercanos");
                         System.out.println("2: Que es lo que mas te gusta hacer en tu dia  'ordenamos tus pasatiempos alfabeticamente'");

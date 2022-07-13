@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package App_Menu_Clases;
-
 /**
  *
- * @author DELL
+ * @author numbe
  */
-public class Clase {
+public class ConexionBD {
+    
     
 }

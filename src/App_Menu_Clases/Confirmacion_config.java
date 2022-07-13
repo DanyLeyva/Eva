@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package App_Diseños;
+package App_Menu_Clases;
 
 /**
  *
- * @author DELL
+ * @author numbe
  */
-public class Clase {
+public class Confirmacion_config {
+    public static String confirmacion;
+    
+    
     
 }
