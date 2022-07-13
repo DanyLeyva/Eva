@@ -85,10 +85,10 @@ public class Caso_Ayuda extends javax.swing.JFrame {
             
             Object[] telefono = telefonos.elementAt( i );
             
-            String mensajeInfo = telefono[2] + ". - " + telefono[1] + ": ";
+            String mensajeInfo = telefono[3] + ". - " + telefono[1] + ": ";
             JLabel labelInfo = new JLabel( mensajeInfo ); 
             
-            String mensajeNum = telefono[3] + "";
+            String mensajeNum = telefono[2] + "";
             JLabel labelNum = new JLabel( mensajeNum );       
             
             panelPrincipal.add( labelInfo );

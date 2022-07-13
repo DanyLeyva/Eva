@@ -33,17 +33,18 @@ public class AccionesFamiliares {
 
     public Vector<Object[]> getFamiliares(int id) {
         try {
-            String query = "select nombre, parentesco, cumpleaños from caso_uno where FK_usuario=" + id + ";";
+            String query = "select id_conocidos, nombre, parentesco, cumpleaños from caso_uno where FK_usuario=" + id + ";";
             res = (ResultSetImpl) st.executeQuery(query);
 
             Vector<Object[]> familiares = new Vector(10, 1);
 
             while (res.next()) {
-                Object[] familiar = new Object[3];
+                Object[] familiar = new Object[4];
 
-                familiar[0] = res.getString("nombre");
-                familiar[1] = res.getString("parentesco");
+                familiar[0] = res.getInt("id_conocidos");
+                familiar[1] = res.getString("nombre");
                 familiar[2] = res.getString("cumpleaños");
+                familiar[3] = res.getString("parentesco");
 
                 familiares.addElement( familiar );
             }

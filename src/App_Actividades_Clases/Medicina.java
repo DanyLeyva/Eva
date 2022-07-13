@@ -13,9 +13,9 @@ public class Medicina extends javax.swing.JPanel {
         this.nombre = nombre;
         this.hora = hora;
         
-        this.mostrarFamiliares();
+        this.mostrarMedicinas();
     }
-    public void mostrarFamiliares() {
+    public void mostrarMedicinas() {
         lblNombre.setText( this.nombre );
         lblHora.setText( this.hora );
     }

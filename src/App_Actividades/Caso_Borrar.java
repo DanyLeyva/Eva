@@ -8,7 +8,6 @@ import App_Actividades_Clases.AccionesAyuda;
 import App_Actividades_Clases.AccionesFamiliares;
 import App_Actividades_Clases.AccionesMedicina;
 import App_Actividades_Clases.AccionesPasatiempos;
-import App_Actividades_Clases.Familiar;
 import App_Actividades_Clases.PanelBorrar;
 import java.awt.BorderLayout;
 import java.util.Vector;
@@ -16,9 +15,6 @@ import java.util.Vector;
 /**
  * @author Mendoza Castañeda José Ricardo
  * 
- * En el 0 - ID,
- * En el 1 - Valor1
- * En el 2 - VAlor2
  */
 
 public class Caso_Borrar extends javax.swing.JFrame {
@@ -30,22 +26,23 @@ public class Caso_Borrar extends javax.swing.JFrame {
     private AccionesPasatiempos metodos_pasatiempos = new AccionesPasatiempos();
     
     private int id = 1;
-    private String caso;
+    private String caso, key1, key2;
+    private Vector<Object[]> datos;
     
     public Caso_Borrar() {
         initComponents();
     }
 
-    public void mostrarData( Vector<Object[]> vector, String key1, String key2 ) {
+    public void mostrarData( String key1, String key2 ) {
         int posY = 0;
         
         panel_principal.removeAll();
         
-        for( int i = 0; i < vector.size(); i++ ) {
-            Object[] data = vector.elementAt( i );
+        for( int i = 0; i < datos.size(); i++ ) {
+            Object[] data = datos.elementAt( i );
             PanelBorrar panel = new PanelBorrar( key1, data[1].toString(), key2, data[2].toString(), Integer.parseInt( data[0].toString() ), this.caso );
             
-            panel.setSize(520, 70);
+            panel.setSize(488, 124);
             panel.setLocation( 0, posY);
             
             posY += 126;
@@ -101,6 +98,11 @@ public class Caso_Borrar extends javax.swing.JFrame {
         panel_actions.setBackground(new java.awt.Color(204, 0, 0));
 
         btnNumeros.setText("Numeros de Ayuda");
+        btnNumeros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNumerosActionPerformed(evt);
+            }
+        });
 
         btnFam.setText("Familiares");
         btnFam.addActionListener(new java.awt.event.ActionListener() {
@@ -219,22 +221,34 @@ public class Caso_Borrar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFamActionPerformed
-        Vector<Object[]> datos = metodos_familiar.getFamiliares(id);
+        this.datos = metodos_familiar.getFamiliares(id);
         this.caso = "familiares";
-        this.mostrarData(datos, "familiar", "cumpleaños");
+        this.mostrarData("Familiar", "Cumpleaños");
     }//GEN-LAST:event_btnFamActionPerformed
 
     private void btnPasatiemposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPasatiemposActionPerformed
-
+        this.datos = metodos_pasatiempos.getPasatiempos(id);
+        this.caso = "pasatiempos";
+        this.mostrarData("Hobbie", "hora");
     }//GEN-LAST:event_btnPasatiemposActionPerformed
 
     private void btnMedicinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicinasActionPerformed
-
+        this.datos = metodos_medicina.getMedicinas(id);
+        this.caso = "medicinas";
+        this.mostrarData("Medicina", "Hora");
     }//GEN-LAST:event_btnMedicinasActionPerformed
 
     private void btnAlarmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlarmasActionPerformed
-
+        this.datos = metodos_alarmas.getAlarmas(id);
+        this.caso = "alarmas";
+        this.mostrarData("Alarma", "Hora");
     }//GEN-LAST:event_btnAlarmasActionPerformed
+
+    private void btnNumerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNumerosActionPerformed
+        this.datos = metodos_ayuda.getNumeros(id);
+        this.caso = "numeros";
+        this.mostrarData("Familiar", "Numero");
+    }//GEN-LAST:event_btnNumerosActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

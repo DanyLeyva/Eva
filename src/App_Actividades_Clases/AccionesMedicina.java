@@ -32,16 +32,17 @@ public class AccionesMedicina {
     }
     public Vector<Object[]> getMedicinas( int id ) {
         try {
-            String query = "select nombre, alarma_medicinas from caso_seis where FK_usuario=" + id + ";";
+            String query = "select id_medicinas, nombre, alarma_medicinas from caso_seis where FK_usuario=" + id + ";";
             res = (ResultSetImpl) st.executeQuery(query);
 
             Vector<Object[]> medicinas = new Vector(10, 1);
 
             while (res.next()) {
-                Object[] medicina = new Object[2];
+                Object[] medicina = new Object[3];
 
-                medicina[0] = res.getString("nombre");
-                medicina[1] = res.getLong("alarma_medicinas");
+                medicina[0] = res.getString("id_medicinas");
+                medicina[1] = res.getString("nombre");
+                medicina[2] = res.getLong("alarma_medicinas");
 
                 medicinas.addElement( medicina );
             }

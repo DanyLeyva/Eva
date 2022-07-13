@@ -27,7 +27,8 @@ public class PanelFamiliares extends javax.swing.JPanel {
         
         for( int i = 0; i < familiares.size(); i++ ) {
             Object[] familiar = familiares.elementAt( i );
-            Familiar panel = new Familiar( familiar[0].toString(), familiar[1].toString(), familiar[2].toString() );
+            
+            Familiar panel = new Familiar( familiar[1].toString(), familiar[3].toString(), familiar[2].toString() );
             panel.setSize(520, 70);
             panel.setLocation( 0, posY);
             

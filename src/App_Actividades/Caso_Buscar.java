@@ -1,8 +1,6 @@
 /** CASO BUSCAR.
  * Su objetivo es buscar la información que desee ver el usuario de la base de datos.
  * Hay 5 casos en los cuales el usuario podra ver la información. 
- * 
- * Panel Alarmas .- Completado
  */
 package App_Actividades;
 

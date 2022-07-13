@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableModel;
 /**
  * @author Mendoza Castañeda José Ricardo
  */
+
 public class PanelAlarmas extends javax.swing.JPanel {
     private AccionesAlarmas acciones = new AccionesAlarmas();
     private int id = 1;
@@ -55,7 +56,7 @@ public class PanelAlarmas extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "ID: ", "Hora", "Nombre"
+                "ID: ", "Nombre:", "Hora:"
             }
         ));
         table.addMouseListener(new java.awt.event.MouseAdapter() {

@@ -37,16 +37,17 @@ public class AccionesPasatiempos {
     }
     public Vector<Object[]> getPasatiempos( int id ) {
         try {
-            String query = "select hobbie, alarma_pasatienpo from caso_dos where FK_usuario =" + id + ";";
+            String query = "select id_pasatiempos, hobbie, alarma_pasatienpo from caso_dos where FK_usuario =" + id + ";";
             res = (ResultSetImpl) st.executeQuery(query);
 
             Vector<Object[]> pasatiempos = new Vector(10, 1);
 
             while (res.next()) {
-                Object[] pasatiempo = new Object[2];
+                Object[] pasatiempo = new Object[3];
 
-                pasatiempo[0] = res.getString("hobbie");
-                pasatiempo[1] = res.getLong("alarma_pasatienpo");
+                pasatiempo[0] = res.getString("id_pasatiempos");
+                pasatiempo[1] = res.getString("hobbie");
+                pasatiempo[2] = res.getLong("alarma_pasatienpo");
 
                 pasatiempos.addElement( pasatiempo );
             }

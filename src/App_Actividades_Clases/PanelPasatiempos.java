@@ -6,8 +6,6 @@ import java.util.Vector;
 
 /**
  * @author Mendoza Castañeda José Ricardo
- * 
- * Pasatiempo recibe el hobbie y la hora
  */
 
 public class PanelPasatiempos extends javax.swing.JPanel {
@@ -27,7 +25,7 @@ public class PanelPasatiempos extends javax.swing.JPanel {
         
         for( int i = 0; i < hobbies.size(); i++ ) {
             Object[] hobbie = hobbies.elementAt( i );
-            Pasatiempo panel = new Pasatiempo( hobbie[0].toString(), hobbie[1].toString() );
+            Pasatiempo panel = new Pasatiempo( hobbie[1].toString(), hobbie[2].toString() );
             panel.setSize(520, 70);
             panel.setLocation( 0, posY);
             

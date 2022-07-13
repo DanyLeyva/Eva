@@ -52,8 +52,8 @@ public class AccionesAlarmas {
                 Object[] alarma = new Object[3];
            
                 alarma[0] = res.getInt("id_alarmas_extra");                
-                alarma[1] = res.getLong("alarmas_extra");
-                alarma[2] = res.getString("nombre");
+                alarma[1] = res.getString("nombre");
+                alarma[2] = res.getLong("alarmas_extra");
                 
                 alarmas.addElement( alarma );
             }

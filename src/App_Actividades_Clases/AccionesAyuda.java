@@ -45,8 +45,8 @@ public class AccionesAyuda {
    
                 numero[0] = res.getInt("id_ayuda");                
                 numero[1] = res.getString("nombre");
-                numero[2] = res.getString("parentesco");
-                numero[3] = res.getString("numero");
+                numero[2] = res.getString("numero");
+                numero[3] = res.getString("parentesco");
                 
                 numeros.addElement( numero );
             }

@@ -20,7 +20,7 @@ public class PanelBorrar extends javax.swing.JPanel {
     private String key, value, caso, key1, value1;
     public int id;
     
-    public PanelBorrar( String key, String value, String key2, String value2, int id, String caso ) {
+    public PanelBorrar( String key, String value, String key1, String value1, int id, String caso ) {
         initComponents();
         
         this.key = key;
@@ -114,7 +114,7 @@ public class PanelBorrar extends javax.swing.JPanel {
         boolean eliminado = false;
         
         if( caso.equals("familiares") ) {
-            eliminado = metodos_pasatiempos.eliminar( id );
+            eliminado = metodos_familiar.eliminar( id );
         }
         if( caso.equals("pasatiempos") ) {
             eliminado = metodos_pasatiempos.eliminar( id );
@@ -131,6 +131,9 @@ public class PanelBorrar extends javax.swing.JPanel {
         
         if( !eliminado ) {
             JOptionPane.showMessageDialog(null, "No se pudo eliminar " + id);
+        }
+        else {
+            this.setVisible(false);
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
